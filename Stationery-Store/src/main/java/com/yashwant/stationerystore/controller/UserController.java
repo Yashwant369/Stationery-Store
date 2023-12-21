@@ -1,0 +1,80 @@
+package com.yashwant.stationerystore.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.yashwant.stationerystore.dtos.UserDto;
+import com.yashwant.stationerystore.serviceImpl.UserServiceImpl;
+import com.yashwant.stationerystore.util.ApiResponse;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+	
+	@Autowired
+	private UserServiceImpl userService;
+	
+	@PostMapping("/saveUser")
+	public ResponseEntity<UserDto>saveUser(@RequestBody UserDto userDto)
+	{
+		UserDto user = userService.createUser(userDto);
+		return new ResponseEntity<>(user,HttpStatus.CREATED);
+		
+	}
+	@PutMapping("/updateUser/{userId}")
+	public ResponseEntity<UserDto>updateUser(@RequestBody UserDto userDto, @PathVariable String userId)
+	{
+		UserDto user = userService.updateuser(userDto, userId);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+		
+	}	
+	@DeleteMapping("/deleteUser/{userId}")
+	public ResponseEntity<ApiResponse>deleteUser(@PathVariable String userId)
+	{
+		userService.deleteUser(userId);
+		ApiResponse response = new ApiResponse();
+		response.setMessage("User Deleted for given User Id : " + userId);
+		response.setStatus(HttpStatus.OK);
+		response.setSuccess(true);
+		return new ResponseEntity<>(response, HttpStatus.OK);
+		
+	}
+	@GetMapping("/getUser/{userId}")
+	public ResponseEntity<UserDto>getUser(@PathVariable String userId)
+	{
+		UserDto user = userService.getUserById(userId);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
+	@GetMapping("/getAllUser")
+	public ResponseEntity<List<UserDto>>getAllUser()
+	{
+		List<UserDto>list = userService.getAllUsers();
+		return new ResponseEntity<>(list, HttpStatus.OK);
+		
+	}
+	@GetMapping("/getUserByEmail/{email}")
+	public ResponseEntity<UserDto>getUserByEmail(@PathVariable String email)
+	{
+		UserDto user = userService.getUserByEmail(email);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
+	@GetMapping("/getUserByName/{userName}")
+	public ResponseEntity<List<UserDto>>getUserByName(@PathVariable String userName)
+	{
+		List<UserDto> user = userService.getUserByName(userName);
+		return new ResponseEntity<>(user, HttpStatus.OK);
+		
+	}
+
+}

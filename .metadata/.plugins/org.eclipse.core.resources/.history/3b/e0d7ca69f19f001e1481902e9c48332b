@@ -1,0 +1,7 @@
+package com.yashwant.stationerystore.controller;
+
+@RestController
+@requestMapping("/User")
+public class UserController {
+
+}
