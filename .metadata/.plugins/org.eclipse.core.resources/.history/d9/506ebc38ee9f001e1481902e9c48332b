@@ -1,0 +1,9 @@
+package com.yashwant.stationerystore.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.yashwant.stationerystore.entity.User;
+
+public interface UserRepo extends JpaRepository<User,String>{
+
+}

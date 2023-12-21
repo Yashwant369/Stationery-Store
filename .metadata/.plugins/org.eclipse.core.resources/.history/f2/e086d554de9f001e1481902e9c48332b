@@ -1,0 +1,62 @@
+package com.yashwant.stationerystore.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.yashwant.stationerystore.dtos.UserDto;
+import com.yashwant.stationerystore.entity.User;
+import com.yashwant.stationerystore.repository.UserRepo;
+import com.yashwant.stationerystore.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	private UserRepo userRepo;
+
+	@Override
+	public UserDto createUser(UserDto userDto) {
+		// TODO Auto-generated method stub
+		User user = convertDtoToUser(userDto);
+		User newUser = 
+		return null;
+	}
+
+	@Override
+	public UserDto updateuser(UserDto userDto, String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(String userId) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<UserDto> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserDto getUserById(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserDto getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UserDto> getUserName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.yashwant.stationerystore.service;
+
+import com.yashwant.stationerystore.dtos.UserDto;
+
+public interface UserService {
+	
+	UserDto createUser(UserDto userDto);
+	
+
+}
