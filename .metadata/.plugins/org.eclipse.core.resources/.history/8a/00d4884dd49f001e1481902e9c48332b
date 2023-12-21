@@ -1,0 +1,7 @@
+package com.yashwant.stationerystore.entity;
+
+@Data
+@Entity
+public class User {
+
+}
