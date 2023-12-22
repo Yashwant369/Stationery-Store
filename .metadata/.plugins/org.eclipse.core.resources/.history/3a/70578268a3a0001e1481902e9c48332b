@@ -1,0 +1,7 @@
+package com.yashwant.stationerystore.exceptions;
+
+
+public class ResourceNotFoundException extends RuntimeException {
+	
+
+}

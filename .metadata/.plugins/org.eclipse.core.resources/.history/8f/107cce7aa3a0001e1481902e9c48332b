@@ -1,0 +1,5 @@
+package com.yashwant.stationerystore.exceptions;
+
+public class GlobalExceptionHandler {
+
+}

@@ -1,0 +1,11 @@
+package com.yashwant.stationerystore.exceptions;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+	
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<ApiResponse>handlerResourceNotFound()
+
+}

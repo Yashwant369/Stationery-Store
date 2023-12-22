@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.yashwant.stationerystore.dtos.UserDto;
 import com.yashwant.stationerystore.entity.User;
+import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.UserRepo;
 import com.yashwant.stationerystore.service.UserService;
 
@@ -63,7 +64,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto updateuser(UserDto userDto, String userId) {
 		// TODO Auto-generated method stub
-		User user = userRepo.findById(userId).orElseThrow(()-> new RuntimeException("User not found with this id"));
+		User user = userRepo.findById(userId).
+		orElseThrow(()-> new ResourceNotFoundException("User not found with given id : " + userId));
 		user.setUserName(userDto.getUserName());
 		user.setUserGender(userDto.getUserGender());
 		user.setUserEmail(userDto.getUserEmail());
@@ -79,7 +81,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void deleteUser(String userId) {
 		// TODO Auto-generated method stub
-		User user = userRepo.findById(userId).orElseThrow(()-> new RuntimeException("user not found with this id"));
+		User user = userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User not found with this id : " + userId));
 		userRepo.delete(user);
 	}
 
@@ -87,6 +89,10 @@ public class UserServiceImpl implements UserService {
 	public List<UserDto> getAllUsers() {
 		// TODO Auto-generated method stub
 		List<User>users = userRepo.findAll();
+		if(users.size() == 0)
+		{
+			throw new ResourceNotFoundException("Users not present");
+		}
 		List<UserDto>list = new ArrayList<>();
 		for(User u : users)
 		{
@@ -99,7 +105,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserDto getUserById(String userId) {
 		// TODO Auto-generated method stub
-		User user = userRepo.findById(userId).orElseThrow(()-> new RuntimeException("User not found with this id"));
+		User user = userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User not found with this id : " + userId));
 		return mapper.map(user, UserDto.class);
 	}
 
@@ -107,6 +113,10 @@ public class UserServiceImpl implements UserService {
 	public UserDto getUserByEmail(String email) {
 		// TODO Auto-generated method stub
 		User user = userRepo.getUserByEmail(email);
+		if(user == null)
+		{
+			throw new ResourceNotFoundException("User not found with given email : " + email);
+		}
 		return mapper.map(user, UserDto.class);
 	}
 
@@ -114,6 +124,10 @@ public class UserServiceImpl implements UserService {
 	public List<UserDto> getUserByName(String name) {
 		// TODO Auto-generated method stub
 		List<User>users = userRepo.getUserByName(name);
+		if(users.size() == 0)
+		{
+			throw new ResourceNotFoundException("Users not present");
+		}
 		List<UserDto>list = new ArrayList<>();
 		for(User u : users)
 		{
