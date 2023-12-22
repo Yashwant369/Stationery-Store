@@ -18,6 +18,8 @@ import com.yashwant.stationerystore.dtos.UserDto;
 import com.yashwant.stationerystore.serviceImpl.UserServiceImpl;
 import com.yashwant.stationerystore.util.ApiResponse;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -26,14 +28,14 @@ public class UserController {
 	private UserServiceImpl userService;
 	
 	@PostMapping("/saveUser")
-	public ResponseEntity<UserDto>saveUser(@RequestBody UserDto userDto)
+	public ResponseEntity<UserDto>saveUser(@Valid @RequestBody UserDto userDto)
 	{
 		UserDto user = userService.createUser(userDto);
 		return new ResponseEntity<>(user,HttpStatus.CREATED);
 		
 	}
 	@PutMapping("/updateUser/{userId}")
-	public ResponseEntity<UserDto>updateUser(@RequestBody UserDto userDto, @PathVariable String userId)
+	public ResponseEntity<UserDto>updateUser(@Valid @RequestBody UserDto userDto, @PathVariable String userId)
 	{
 		UserDto user = userService.updateuser(userDto, userId);
 		return new ResponseEntity<>(user, HttpStatus.OK);

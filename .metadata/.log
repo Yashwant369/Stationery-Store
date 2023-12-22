@@ -2545,3 +2545,490 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:05:37.286
 !MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:10:40.423
+!MESSAGE Could not get hover region due to timeout after 1000 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverRegion(LSPTextHover.java:155)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverRegion(CompositeTextHover.java:101)
+	at org.eclipse.jface.text.TextViewerHoverManager.computeInformation(TextViewerHoverManager.java:128)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1101)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager$MouseTracker.mouseHover(AbstractHoverInformationControlManager.java:511)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4072)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:10:41.751
+!MESSAGE Could not get hover information due to timeout after 1000 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:76)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverInfo2(CompositeTextHover.java:60)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:31:49.202
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:31:49.448
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:31:50.440
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:05.550
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:06.171
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:17.708
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:19.882
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:23.078
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:27.201
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:32.594
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:34.683
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:40.365
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:50.057
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:54.601
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:32:57.933
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:02.078
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:07.206
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:10.299
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:16.025
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:29.048
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:32.180
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:41.700
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:33:48.645
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:02.529
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:06.672
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:08.877
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:22.111
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:23.216
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:30.304
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:36.974
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:42.162
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:34:45.277
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:10.775
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:15.450
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:19.355
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:26.039
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:30.416
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:35.360
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:42.304
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:57.678
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:35:59.542
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:35:59.797
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:02.937
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:10.580
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:25.944
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:33.396
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:39.562
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:42.713
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:46.963
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:51.866
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:54.978
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:36:58.687
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:20.261
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:22.425
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:24.588
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:29.629
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:42.817
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:47.921
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:52.197
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:55.988
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:38:59.276
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:03.741
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:07.820
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:09.959
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:39:10.271
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:32.939
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:34.025
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:35.137
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:44.739
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:45.912
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:39:53.875
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:03.123
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:06.249
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:12.731
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:52.051
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:54.123
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:40:58.897
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:41:10.879
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:41:20.190
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:41:22.320
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:41:24.385
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:41:24.743
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:41:29.548
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:14.971
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:23.471
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:27.637
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:42:38.843
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:41.150
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:42:43.118
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:43.269
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:50.657
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-22 14:42:51.090
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:42:58.906
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:02.575
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:12.852
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:20.330
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:26.471
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:28.567
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:33.658
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:40.041
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:46.256
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:52.286
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:56.297
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:43:58.387
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:01.563
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:02.730
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:05.895
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:09.014
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:11.152
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:16.541
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:18.626
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:20.743
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:24.098
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:28.323
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:30.395
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:34.029
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:36.150
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:41.735
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:47.862
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:50.041
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:44:53.164
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:45:08.244
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:45:29.354
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:31.821
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:37.813
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:40.019
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:44.427
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:48.851
+!MESSAGE Classpath changed for project: Stationery-Store

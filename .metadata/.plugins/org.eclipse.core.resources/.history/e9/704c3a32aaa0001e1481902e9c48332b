@@ -1,0 +1,37 @@
+package com.yashwant.stationerystore.exceptions;
+
+import java.util.HashMap;
+
+import org.hibernate.mapping.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.yashwant.stationerystore.util.ApiResponse;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+	
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<ApiResponse>handlerResourceNotFound(ResourceNotFoundException ex)
+	{
+		ApiResponse response = new ApiResponse();
+		response.setMessage(ex.getMessage());
+		response.setSuccess(false);
+		response.setStatus(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+		
+	}
+	
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<HashMap<String,String>>handlerMethodArgument(MethodArgumentNotValidException ex)
+	{
+		HashMap<String,String>map = new HashMap<>();
+		List<ObjectError>list = ex.getBindingResult().getAllErrors();
+		
+		return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
+	}
+
+}

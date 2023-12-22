@@ -1,7 +1,13 @@
 package com.yashwant.stationerystore.exceptions;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -19,6 +25,20 @@ public class GlobalExceptionHandler {
 		response.setStatus(HttpStatus.NOT_FOUND);
 		return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 		
+	}
+	
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ResponseEntity<HashMap<String,String>>handlerMethodArgument(MethodArgumentNotValidException ex)
+	{
+		HashMap<String,String>map = new HashMap<>();
+		List<ObjectError>list = ex.getBindingResult().getAllErrors();
+		for(ObjectError error : list)
+		{
+			String message = error.getDefaultMessage();
+			String field = ((FieldError)error).getField();
+			map.put(field, message);
+		}
+		return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
 	}
 
 }

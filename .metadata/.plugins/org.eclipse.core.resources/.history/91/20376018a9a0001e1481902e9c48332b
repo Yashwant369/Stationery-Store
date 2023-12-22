@@ -1,0 +1,21 @@
+package com.yashwant.stationerystore.dtos;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+
+@Data
+public class UserDto {
+	
+	private String userId;
+	@NotBlank(message = "Please Enter User Name")
+	private String userName;
+	@Size(min = 4, max = 6, message = "Please Enter Appropriate Gender")
+	private String userGender;
+	@
+	private String userEmail;
+	private String userPassword;
+	private String userImage;
+	
+
+}
