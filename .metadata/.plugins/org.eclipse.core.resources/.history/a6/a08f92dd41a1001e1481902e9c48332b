@@ -1,0 +1,8 @@
+package com.yashwant.stationerystore.util;
+
+@Data
+public class PageResponse<T> {
+	
+	private 
+
+}

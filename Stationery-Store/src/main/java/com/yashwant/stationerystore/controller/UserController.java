@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.yashwant.stationerystore.dtos.UserDto;
 import com.yashwant.stationerystore.serviceImpl.UserServiceImpl;
 import com.yashwant.stationerystore.util.ApiResponse;
+import com.yashwant.stationerystore.util.PageResponse;
 
 import jakarta.validation.Valid;
 
@@ -60,13 +61,13 @@ public class UserController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 	@GetMapping("/getAllUser")
-	public ResponseEntity<List<UserDto>>getAllUser(@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
+	public ResponseEntity<PageResponse<UserDto>>getAllUser(@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
 			@RequestParam(value = "pageSize", defaultValue = "2", required = false)int pageSize,
 			@RequestParam(value = "sortBy",defaultValue = "userName",required = false)String sortBy,
 			@RequestParam(value = "sortDir",defaultValue = "asc", required = false)String sortDir)
 	{
-		List<UserDto>list = userService.getAllUsers(pageNumber, pageSize, sortBy, sortDir);
-		return new ResponseEntity<>(list, HttpStatus.OK);
+		PageResponse<UserDto>response = userService.getAllUsers(pageNumber, pageSize, sortBy, sortDir);
+		return new ResponseEntity<>(response, HttpStatus.OK);
 		
 	}
 	@GetMapping("/getUserByEmail/{email}")

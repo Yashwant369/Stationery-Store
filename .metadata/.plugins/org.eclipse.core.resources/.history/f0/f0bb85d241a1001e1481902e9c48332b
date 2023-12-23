@@ -1,0 +1,6 @@
+package com.yashwant.stationerystore.util;
+
+public class PageResponse<T> {
+	
+
+}

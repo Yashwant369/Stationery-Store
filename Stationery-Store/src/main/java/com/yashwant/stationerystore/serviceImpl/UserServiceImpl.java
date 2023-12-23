@@ -15,6 +15,8 @@ import com.yashwant.stationerystore.entity.User;
 import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.UserRepo;
 import com.yashwant.stationerystore.service.UserService;
+import com.yashwant.stationerystore.util.PageResponse;
+
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
@@ -90,9 +92,18 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDto> getAllUsers(int pageNumber, int pageSize, String sortBy, String sortDir) {
+	public PageResponse<UserDto> getAllUsers(int pageNumber, int pageSize, String sortBy, String sortDir) {
 		// TODO Auto-generated method stub
-		Sort sort = Sort.by(sortBy);
+		Sort sort = null;
+		if(sortDir.equals("asc"))
+		{
+			sort = Sort.by(sortBy).ascending();
+		}
+		else if(sortDir.equals("desc"))
+		{
+			sort = Sort.by(sortBy).descending();
+		}
+		//Sort sort = Sort.by(sortBy);
 		Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
 		Page<User>page = userRepo.findAll(pageable);
 		List<User>users = page.getContent();
@@ -106,7 +117,14 @@ public class UserServiceImpl implements UserService {
 			UserDto userDto = mapper.map(u, UserDto.class);
 			list.add(userDto);
 		}
-		return list;
+		PageResponse<UserDto>response = new PageResponse<>();
+		response.setContent(list);
+		response.setLastPage(page.isLast());
+		response.setPageNumber(page.getNumber());
+		response.setPageSize(page.getSize());
+		response.setTotalElement((int) page.getTotalElements());
+		response.setTotalPages(page.getTotalPages());
+		return response;
 	}
 
 	@Override
