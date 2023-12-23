@@ -16,6 +16,7 @@ import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.UserRepo;
 import com.yashwant.stationerystore.service.UserService;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -89,10 +90,10 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDto> getAllUsers(int pageNumber, int pageSize) {
+	public List<UserDto> getAllUsers(int pageNumber, int pageSize, String sortBy, String sortDir) {
 		// TODO Auto-generated method stub
-		
-		Pageable pageable = PageRequest.of(pageNumber, pageSize);
+		Sort sort = Sort.by(sortBy);
+		Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
 		Page<User>page = userRepo.findAll(pageable);
 		List<User>users = page.getContent();
 		if(users.size() == 0)
