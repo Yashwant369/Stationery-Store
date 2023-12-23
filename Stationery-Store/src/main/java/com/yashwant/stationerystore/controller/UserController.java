@@ -77,10 +77,14 @@ public class UserController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 	@GetMapping("/getUserByName/{userName}")
-	public ResponseEntity<List<UserDto>>getUserByName(@PathVariable String userName)
+	public ResponseEntity<PageResponse<UserDto>>getUserByName(@PathVariable String userName,
+			@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
+			@RequestParam(value = "pageSize", defaultValue = "2",required = false)int pageSize,
+			@RequestParam(value = "sortBy",defaultValue = "user_name",required = false)String sortBy,
+			@RequestParam(value = "sortDir",defaultValue = "asc",required = false)String sortDir)
 	{
-		List<UserDto> user = userService.getUserByName(userName);
-		return new ResponseEntity<>(user, HttpStatus.OK);
+		PageResponse<UserDto>response = userService.getUserByName(userName, pageNumber, pageSize, sortBy, sortDir );
+		return new ResponseEntity<>(response, HttpStatus.OK);
 		
 	}
 

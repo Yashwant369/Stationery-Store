@@ -2,6 +2,8 @@ package com.yashwant.stationerystore.repository;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -13,6 +15,6 @@ public interface UserRepo extends JpaRepository<User,String>{
 	User getUserByEmail(String email);
     
 	@Query(value = "select * from user where user_name = :name", nativeQuery = true)
-	List<User> getUserByName(String name);
+	Page<User> getUserByName(String name, Pageable pageable);
 
 }

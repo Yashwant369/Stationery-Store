@@ -13,6 +13,6 @@ public interface UserService {
 	PageResponse<UserDto>getAllUsers(int pageNumber, int pageSize, String sortBy, String sortDir);
 	UserDto getUserById(String userId);
 	UserDto getUserByEmail(String email);
-	List<UserDto>getUserByName(String name);
+	PageResponse<UserDto>getUserByName(String name, int pageNumber, int pageSize, String sortBy, String sortDir);
 
 }

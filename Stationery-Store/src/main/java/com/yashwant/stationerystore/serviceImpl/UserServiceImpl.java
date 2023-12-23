@@ -146,9 +146,22 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDto> getUserByName(String name) {
+	public PageResponse<UserDto> getUserByName(String name, int pageNumber, int pageSize, String sortBy, String sortDir) {
 		// TODO Auto-generated method stub
-		List<User>users = userRepo.getUserByName(name);
+		
+		Sort sort = null;
+		if(sortDir.equals("asc"))
+		{
+			sort = Sort.by(sortBy).ascending();
+		}
+		else if(sortDir.equals("desc"))
+		{
+			sort = Sort.by(sortBy).descending();
+		}
+		
+		Pageable pageable = PageRequest.of(pageNumber, pageSize,sort);
+		Page<User>page = userRepo.getUserByName(name,pageable);
+		List<User>users = page.getContent();
 		if(users.size() == 0)
 		{
 			throw new ResourceNotFoundException("Users not present");
@@ -159,7 +172,14 @@ public class UserServiceImpl implements UserService {
 			UserDto userDto = mapper.map(u, UserDto.class);
 			list.add(userDto);
 		}
-		return list;
+		PageResponse<UserDto>response = new PageResponse<>();
+		response.setContent(list);
+		response.setLastPage(page.isLast());
+		response.setPageNumber(page.getNumber());
+		response.setPageSize(page.getSize());
+		response.setTotalElement((int) page.getTotalElements());
+		response.setTotalPages(page.getTotalPages());
+		return response;
 	}
 
 }
