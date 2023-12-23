@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.yashwant.stationerystore.dtos.UserDto;
@@ -13,6 +15,7 @@ import com.yashwant.stationerystore.entity.User;
 import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.UserRepo;
 import com.yashwant.stationerystore.service.UserService;
+import org.springframework.data.domain.Pageable;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -86,9 +89,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<UserDto> getAllUsers() {
+	public List<UserDto> getAllUsers(int pageNumber, int pageSize) {
 		// TODO Auto-generated method stub
-		List<User>users = userRepo.findAll();
+		
+		Pageable pageable = PageRequest.of(pageNumber, pageSize);
+		Page<User>page = userRepo.findAll(pageable);
+		List<User>users = page.getContent();
 		if(users.size() == 0)
 		{
 			throw new ResourceNotFoundException("Users not present");

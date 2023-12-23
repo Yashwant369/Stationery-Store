@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yashwant.stationerystore.dtos.UserDto;
@@ -59,9 +60,10 @@ public class UserController {
 		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 	@GetMapping("/getAllUser")
-	public ResponseEntity<List<UserDto>>getAllUser()
+	public ResponseEntity<List<UserDto>>getAllUser(@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
+			@RequestParam(value = "pageSize", defaultValue = "2", required = false)int pageSize)
 	{
-		List<UserDto>list = userService.getAllUsers();
+		List<UserDto>list = userService.getAllUsers(pageNumber, pageSize);
 		return new ResponseEntity<>(list, HttpStatus.OK);
 		
 	}

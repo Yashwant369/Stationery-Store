@@ -3032,3 +3032,332 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-22 14:46:48.851
 !MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:15:37.590
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:15:39.734
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:15:43.835
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:15:47.085
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:01.761
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:05.604
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:12.275
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:17.967
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:20.111
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:26.347
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-12-23 08:16:26.684
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:30.423
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:58.035
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:16:59.262
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:02.375
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:05.566
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:10.712
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:13.844
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:17.012
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:23.998
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:27.243
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:31.870
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:37.786
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:44.807
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:46.932
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:52.473
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:17:55.595
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:18:23.391
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:18:30.047
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:18:54.351
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:19:05.109
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:19:13.245
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:19:55.291
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:19:58.248
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:01.368
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:05.083
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:09.953
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:13.095
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:15.190
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:20:24.337
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-12-23 08:20:28.089
+!MESSAGE Could not retrieve superclass
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type org.springframework.hateoas.RepresentationModel cannot be resolved. It is indirectly referenced from required type org.springframework.data.domain.jaxb.SpringDataJaxb.PageDto
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:162)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:229)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2682)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:5170)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:125)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.superclass(BinaryTypeBinding.java:2372)
+	at org.eclipse.jdt.core.dom.TypeBinding.getSuperclass(TypeBinding.java:857)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.isInherited(UnresolvedElementsSubProcessor.java:944)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:912)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:683)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:424)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:361)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-12-23 08:20:41.640
+!MESSAGE Could not retrieve superclass
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type org.springframework.hateoas.RepresentationModel cannot be resolved. It is indirectly referenced from required type org.springframework.data.domain.jaxb.SpringDataJaxb.PageDto
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:162)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:229)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2682)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:5170)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:125)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.superclass(BinaryTypeBinding.java:2372)
+	at org.eclipse.jdt.core.dom.TypeBinding.getSuperclass(TypeBinding.java:857)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.isInherited(UnresolvedElementsSubProcessor.java:944)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:912)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:683)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:424)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:361)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-12-23 08:20:51.229
+!MESSAGE Could not retrieve superclass
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type org.springframework.hateoas.RepresentationModel cannot be resolved. It is indirectly referenced from required type org.springframework.data.domain.jaxb.SpringDataJaxb.PageDto
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:162)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:229)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2682)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:5170)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:125)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.superclass(BinaryTypeBinding.java:2372)
+	at org.eclipse.jdt.core.dom.TypeBinding.getSuperclass(TypeBinding.java:857)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.isInherited(UnresolvedElementsSubProcessor.java:944)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:912)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:683)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:424)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:361)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:21:40.233
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:21:42.432
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:21:55.103
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:09.004
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:11.132
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:18.302
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:21.591
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:31.904
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:35.472
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:37.590
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:41.825
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:46.481
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:49.666
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:50.730
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:22:56.973
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:00.449
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:02.526
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.eclipse.jdt.core 4 4 2023-12-23 08:23:03.491
+!MESSAGE Could not retrieve superclass
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type org.springframework.hateoas.RepresentationModel cannot be resolved. It is indirectly referenced from required type org.springframework.data.domain.jaxb.SpringDataJaxb.PageDto
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:162)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:229)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2682)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:5170)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:125)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:251)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.superclass(BinaryTypeBinding.java:2372)
+	at org.eclipse.jdt.core.dom.TypeBinding.getSuperclass(TypeBinding.java:857)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.isInherited(UnresolvedElementsSubProcessor.java:944)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.addSimilarTypeProposals(UnresolvedElementsSubProcessor.java:912)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:683)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:424)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:361)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:08.765
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:14.957
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:21.007
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:29.292
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:23:49.335
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:24:31.104
+!MESSAGE Classpath changed for project: Stationery-Store
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-12-23 08:24:33.219
+!MESSAGE Classpath changed for project: Stationery-Store
