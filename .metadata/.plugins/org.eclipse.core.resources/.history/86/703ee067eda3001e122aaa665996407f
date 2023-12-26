@@ -1,0 +1,10 @@
+package com.yashwant.stationerystore.service;
+
+import com.yashwant.stationerystore.dtos.CategoryDto;
+
+public interface CategoryService {
+	
+	public CategoryDto saveCategory(CategoryDto category);
+	public CategoryDto update
+
+}

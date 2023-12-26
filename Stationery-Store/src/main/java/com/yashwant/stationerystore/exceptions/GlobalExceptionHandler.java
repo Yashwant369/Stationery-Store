@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
 		ApiResponse response = new ApiResponse();
 		response.setMessage(ex.getMessage());
 		response.setSuccess(false);
-		response.setStatus(HttpStatus.NOT_FOUND);
+		response.setStatus(HttpStatus.BAD_REQUEST);
 		return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 		
 	}

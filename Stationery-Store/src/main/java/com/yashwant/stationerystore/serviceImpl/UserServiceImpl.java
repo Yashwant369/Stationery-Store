@@ -1,5 +1,9 @@
 package com.yashwant.stationerystore.serviceImpl;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -29,6 +33,7 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private ModelMapper mapper;
 	
+	String path = "Images/Users/";
 
 	@Override
 	public UserDto createUser(UserDto userDto) {
@@ -88,6 +93,15 @@ public class UserServiceImpl implements UserService {
 	public void deleteUser(String userId) {
 		// TODO Auto-generated method stub
 		User user = userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User not found with this id : " + userId));
+		String fullPath = path + user.getUserImage();
+		
+		Path paths = Paths.get(fullPath);
+		try {
+			Files.delete(paths);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		userRepo.delete(user);
 	}
 

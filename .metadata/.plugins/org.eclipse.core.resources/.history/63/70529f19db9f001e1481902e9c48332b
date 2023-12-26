@@ -1,6 +1,0 @@
-package com.yashwant.stationerystore.dtos;
-
-@
-public class UserDto {
-
-}
