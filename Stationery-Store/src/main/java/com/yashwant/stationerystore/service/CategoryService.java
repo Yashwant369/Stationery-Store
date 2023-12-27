@@ -10,7 +10,7 @@ public interface CategoryService {
 	public CategoryDto updateCategory(CategoryDto category, String categoryId);
 	public ApiResponse deleteCategory(String categoryId);
 	public CategoryDto getCategoryById(String categoryId);
-	public PageResponse getAllCategory();
 	public CategoryDto getCategoryByTitle(String title);
+	PageResponse<CategoryDto> getAllCategory(int pageNumber, int pageSize, String sortBy, String sortDir);
 
 }
