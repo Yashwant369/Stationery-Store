@@ -1,0 +1,20 @@
+package com.yashwant.stationerystore.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.yashwant.stationerystore.serviceImpl.ProductServiceImpl;
+
+@RestController
+@RequestMapping("/product")
+public class ProductController {
+	
+	@Autowired
+	private ProductServiceImpl productService;
+	
+	
+	@PostMapping("/saveProduct")
+	public ResponseEntity<ProductDto>saveProduct(@Request)
+
+}

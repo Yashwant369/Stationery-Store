@@ -95,10 +95,11 @@ public class UserController {
 	public ResponseEntity<PageResponse<UserDto>>getUserByName(@PathVariable String userName,
 			@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
 			@RequestParam(value = "pageSize", defaultValue = "2",required = false)int pageSize,
-			@RequestParam(value = "sortBy",defaultValue = "user_name",required = false)String sortBy,
+			@RequestParam(value = "sortBy",defaultValue = "userName",required = false)String sortBy,
 			@RequestParam(value = "sortDir",defaultValue = "asc",required = false)String sortDir)
 	{
-		PageResponse<UserDto>response = userService.getUserByName(userName, pageNumber, pageSize, sortBy, sortDir );
+		PageResponse<UserDto>response = userService.getUserByName(userName, pageNumber, 
+				pageSize, sortBy, sortDir );
 		return new ResponseEntity<>(response, HttpStatus.OK);
 		
 	}

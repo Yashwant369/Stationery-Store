@@ -1,0 +1,9 @@
+package com.yashwant.stationerystore.entity;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Product {
+
+}

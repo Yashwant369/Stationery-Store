@@ -1,0 +1,115 @@
+package com.yashwant.stationerystore.serviceImpl;
+
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.yashwant.stationerystore.dtos.ProductDto;
+import com.yashwant.stationerystore.entity.Product;
+import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
+import com.yashwant.stationerystore.repository.ProductRepo;
+import com.yashwant.stationerystore.service.ProductService;
+import com.yashwant.stationerystore.util.ApiResponse;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepo productRepo;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Override
+	public ProductDto saveProduct(ProductDto productDto) {
+		// TODO Auto-generated method stub
+		Date date = new Date();
+		productDto.setProductAddedDate(date);
+		String productId = UUID.randomUUID().toString();
+		productDto.setProductId(productId);
+		Product product  = mapper.map(productDto, Product.class);
+		Product newProduct = productRepo.save(product);
+		return mapper.map(newProduct, ProductDto.class);
+	}
+
+	@Override
+	public ProductDto updateProduct(ProductDto productDto, String productId) {
+		// TODO Auto-generated method stub
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Resource not found for given id : " + productId));
+		product.setProductDescription(productDto.getProductDescription());
+		product.setProductDiscountPrice(productDto.getProductDiscountPrice());
+		product.setProductImage(productDto.getProductImage());
+		//product.setProductLive(productDto.get);
+		product.setProductPrice(productDto.getProductPrice());
+		product.setProductQuantity(productDto.getProductQuantity());
+		product.setProductTitle(productDto.getProductTitle());
+		product.setProductStock(productDto.isProductStock());
+		product.setProductLive(productDto.isProductLive());
+		
+		Product updatedProduct = productRepo.save(product);
+		return mapper.map(updatedProduct, ProductDto.class);
+	}
+
+	@Override
+	public ApiResponse deleteProduct(String productId) {
+		// TODO Auto-generated method stub
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Resource not found for given id : " + productId));
+		productRepo.delete(product);
+		ApiResponse response = new ApiResponse();
+		response.setMessage("Product deleted for given id : " + productId);
+		response.setSuccess(true);
+		response.setStatus(HttpStatus.OK);
+		return response;
+	}
+
+	@Override
+	public ProductDto getById(String productId) {
+		// TODO Auto-generated method stub
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Resource not found for given id : " + productId));
+		return mapper.map(product, ProductDto.class);
+	}
+
+	@Override
+	public List<ProductDto> getAllProduct(int pageNumber, int pageSize, String sortBy, String sortDir) {
+		// TODO Auto-generated method stub
+		
+		Sort sort = null;
+		if(sortDir)
+		
+		
+		return null;
+	}
+
+	@Override
+	public List<ProductDto> getByTitle(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductDto> getByPrice(double price) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductDto> getByDate(Date date) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductDto> getByLive() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -74,14 +74,14 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public PageResponse<CategoryDto> getAllCategory(int pageNumber, int pageSize, String sortBy, String sortDir) {
+	public PageResponse<CategoryDto> getAllCategory11(int pageNumber, int pageSize, String sortBy, String sortDir) {
 		// TODO Auto-generated method stub
 		Sort sort = null;
 		if(sortDir.equalsIgnoreCase("asc"))
 		{
 			sort = Sort.by(sortBy).ascending();
 		}
-		else 
+		else if(sortDir.equalsIgnoreCase("desc"))
 		{
 			sort = Sort.by(sortBy).descending();
 		}
@@ -120,6 +120,17 @@ public class CategoryServiceImpl implements CategoryService {
 			throw new ResourceNotFoundException("Resource not found for given title : " + title);
 		}
 		return mapper.map(category, CategoryDto.class);
+	}
+	public List<CategoryDto>getAllCategory1()
+	{
+		List<Category>category = categoryRepo.findAll();		
+		List<CategoryDto>list = new ArrayList<>();
+		for(Category c : category)
+		{
+			CategoryDto cDto = mapper.map(c,CategoryDto.class);
+			list.add(cDto);
+		}
+		return list;
 	}
 
 }

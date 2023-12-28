@@ -1,0 +1,17 @@
+package com.yashwant.stationerystore.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity
+public class Product {
+	
+	@Id
+	private String productId;
+	private String productTitle;
+	pro
+	
+
+}

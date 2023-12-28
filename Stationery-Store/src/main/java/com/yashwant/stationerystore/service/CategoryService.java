@@ -1,16 +1,19 @@
 package com.yashwant.stationerystore.service;
 
+import java.util.List;
+
 import com.yashwant.stationerystore.dtos.CategoryDto;
 import com.yashwant.stationerystore.util.ApiResponse;
 import com.yashwant.stationerystore.util.PageResponse;
 
 public interface CategoryService {
 	
-	public CategoryDto saveCategory(CategoryDto category);
-	public CategoryDto updateCategory(CategoryDto category, String categoryId);
+	public CategoryDto saveCategory(CategoryDto categoryDto);
+	public CategoryDto updateCategory(CategoryDto categoryDto, String categoryId);
 	public ApiResponse deleteCategory(String categoryId);
 	public CategoryDto getCategoryById(String categoryId);
 	public CategoryDto getCategoryByTitle(String title);
-	PageResponse<CategoryDto> getAllCategory(int pageNumber, int pageSize, String sortBy, String sortDir);
+	public List<CategoryDto>getAllCategory1();
+	public PageResponse<CategoryDto> getAllCategory11(int pageNumber, int pageSize, String sortBy, String sortDir);
 
 }

@@ -1,5 +1,7 @@
 package com.yashwant.stationerystore.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -61,11 +63,17 @@ public class CategoryController {
 	public ResponseEntity<PageResponse<CategoryDto>>getAllCategory(
 	@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
 	@RequestParam(value = "pageSize", defaultValue = "2", required = false)int pageSize,
-	@RequestParam(value = "sortBy", defaultValue ="category_title", required = false)String sortBy,
+	@RequestParam(value = "sortBy", defaultValue ="categoryTitle", required = false)String sortBy,
 	@RequestParam(value = "sortDir",defaultValue = "asc", required = false)String sortDir)
 	{
-		PageResponse<CategoryDto> response = categoryService.getAllCategory(pageNumber, pageSize, sortBy, sortDir);
+		PageResponse<CategoryDto> response = categoryService.getAllCategory11(pageNumber, pageSize, sortBy, sortDir);
 		return new ResponseEntity<>(response,HttpStatus.OK);
+	}
+	
+	@GetMapping("/getAllCategory1")
+	public List<CategoryDto>getAllCategory1()
+	{
+		return categoryService.getAllCategory1();
 	}
 	
 	

@@ -1,0 +1,10 @@
+package com.yashwant.stationerystore.service;
+
+import com.yashwant.stationerystore.dtos.ProductDto;
+
+public interface ProductService {
+	
+	ProductDto saveProduct(ProductDto productDto);
+	List<ProductDto>getByTitle()
+
+}
