@@ -17,5 +17,6 @@ public class ProductDto {
 	private boolean productLive;
 	private boolean productStock;
 	private String productImage;
+	private CategoryDto category;
 
 }

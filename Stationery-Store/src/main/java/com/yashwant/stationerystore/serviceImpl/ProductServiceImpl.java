@@ -17,7 +17,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import com.yashwant.stationerystore.dtos.CategoryDto;
 import com.yashwant.stationerystore.dtos.ProductDto;
+import com.yashwant.stationerystore.entity.Category;
 import com.yashwant.stationerystore.entity.Product;
 import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.ProductRepo;
@@ -37,6 +39,9 @@ public class ProductServiceImpl implements ProductService {
 	private ModelMapper mapper;
 	
 	private String path = "Images/Product/";
+	
+	@Autowired
+	private CategoryServiceImpl categoryService;
 	
 	@Override
 	public ProductDto saveProduct(ProductDto productDto) {
@@ -172,5 +177,63 @@ public class ProductServiceImpl implements ProductService {
 		
 		return null;
 	}
+
+	@Override
+	public ProductDto saveProductWithCategory(ProductDto productDto, String categoryId) {
+		// TODO Auto-generated method stub
+		
+		CategoryDto categoryDto = categoryService.getCategoryById(categoryId);
+		//Category category = mapper.map(categoryDto, Category.class);
+		String productId = UUID.randomUUID().toString();
+		productDto.setProductId(productId);
+		productDto.setProductAddedDate(new Date());
+		productDto.setCategory(categoryDto);	
+		Product product = mapper.map(productDto, Product.class);
+		Product newProduct = productRepo.save(product);
+		return mapper.map(newProduct, ProductDto.class);
+	}
+
+	@Override
+	public PageResponse<ProductDto> getproductByCategory(String categoryId, int pageNumber, int pageSize, String sortBy,
+			String sortDir) {
+		// TODO Auto-generated method stub
+		
+		Sort sort = null;
+		if(sortDir.equalsIgnoreCase("asc"))
+		{
+			sort = Sort.by(sortBy).ascending();
+			
+		}
+		else 
+		{
+			sort = Sort.by(sortBy).descending();
+		}
+		
+		Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
+		Page<Product>page = productRepo.findByCategoryId(categoryId, pageable);
+		List<Product>product = page.getContent();
+		if(product.size() == 0)
+		{
+			throw new ResourceNotFoundException("Resource not found");
+		}
+		List<ProductDto>list = new ArrayList<>();
+		for(Product p : product)
+		{
+			ProductDto pDto = mapper.map(p, ProductDto.class);
+			list.add(pDto);
+		}
+		PageResponse<ProductDto> response = new PageResponse<>();
+		response.setContent(list);
+		response.setLastPage(page.isLast());
+		response.setPageNumber(response.getPageNumber());
+		response.setPageSize(page.getSize());
+		response.setTotalElement((int) page.getTotalElements());
+		response.setTotalPages(page.getTotalPages());
+		return response;
+	}
+
+	
+
+	
 
 }

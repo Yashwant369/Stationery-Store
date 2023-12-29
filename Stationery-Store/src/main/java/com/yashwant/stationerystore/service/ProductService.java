@@ -18,5 +18,7 @@ public interface ProductService {
 	PageResponse<ProductDto>getByPrice(double price, int pageNumber, int pageSize, String sortBy, String sortDir);
 	PageResponse<ProductDto>getByDate(Date date, int pageNumber, int pageSize, String sortBy, String sortDir);
 	PageResponse<ProductDto>getByLive(int pageNumber, int pageSize, String sortBy, String sortDir);
+	ProductDto saveProductWithCategory(ProductDto productDto, String categoryId);
+	PageResponse<ProductDto>getproductByCategory(String categoryId, int pageNumber, int pageSize, String sortBy, String sortDir);
 	
 }

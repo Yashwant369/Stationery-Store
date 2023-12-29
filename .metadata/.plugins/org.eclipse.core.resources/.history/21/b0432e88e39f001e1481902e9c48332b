@@ -1,6 +1,0 @@
-package com.yashwant.stationerystore.configuration;
-
-@Configurations
-public class Configurations {
-
-}

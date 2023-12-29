@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.yashwant.stationerystore.dtos.CategoryDto;
 import com.yashwant.stationerystore.dtos.ProductDto;
+import com.yashwant.stationerystore.serviceImpl.CategoryServiceImpl;
 import com.yashwant.stationerystore.serviceImpl.FileServiceImpl;
 import com.yashwant.stationerystore.serviceImpl.ProductServiceImpl;
 import com.yashwant.stationerystore.util.ApiResponse;
@@ -40,6 +42,17 @@ public class ProductController {
 	
 	@Autowired
 	private FileServiceImpl fileService;
+	
+	@Autowired
+	private CategoryServiceImpl categoryService;
+	
+	@PostMapping("/saveProduct/{categoryId}")
+	public ResponseEntity<ProductDto>saveproduct(@RequestBody ProductDto producDto, @PathVariable String categoryId)
+	{
+		ProductDto product = productService.saveProductWithCategory(producDto, categoryId);
+		return new ResponseEntity<>(product, HttpStatus.OK);
+		
+	}
 		
 	@PostMapping("/saveProduct")
 	public ResponseEntity<ProductDto>saveProduct(@RequestBody ProductDto productDto)
@@ -68,7 +81,7 @@ public class ProductController {
 	@GetMapping("/getAllProduct")
 	public ResponseEntity<PageResponse<ProductDto>>getAllProduct(
 			@RequestParam(value = "pageNumber", defaultValue = "0",required = false) int pageNumber,
-			@RequestParam(value = "pageSize", defaultValue = "2", required = false)int pageSize,
+			@RequestParam(value = "pageSize", defaultValue = "5", required = false)int pageSize,
 			@RequestParam(value = "sortBy", defaultValue = "productTitle", required = false)String sortBy,
 			@RequestParam(value = "sortDir", defaultValue = "asc", required = false)String sortDir)
 	{
@@ -99,6 +112,17 @@ public class ProductController {
 			e.printStackTrace();
 		}
 	}
+	@PutMapping("/updateCategory/{productId}/{categoryId}")
+	public ResponseEntity<ProductDto>updateCategory(@PathVariable String productId, @PathVariable String categoryId)
+	{
+		ProductDto product = productService.getById(productId);
+		CategoryDto category = categoryService.getCategoryById(categoryId);		
+		product.setCategory(category);
+		ProductDto updatedProduct = productService.updateProduct(product, productId);
+		return new ResponseEntity<>(updatedProduct,HttpStatus.OK);
+		
+	}
+	
 	
 	
 

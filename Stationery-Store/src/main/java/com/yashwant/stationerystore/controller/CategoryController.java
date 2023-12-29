@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.yashwant.stationerystore.dtos.CategoryDto;
+import com.yashwant.stationerystore.dtos.ProductDto;
 import com.yashwant.stationerystore.serviceImpl.CategoryServiceImpl;
+import com.yashwant.stationerystore.serviceImpl.ProductServiceImpl;
 import com.yashwant.stationerystore.util.ApiResponse;
 import com.yashwant.stationerystore.util.PageResponse;
 
@@ -26,6 +28,9 @@ public class CategoryController {
 	
 	@Autowired
 	private CategoryServiceImpl categoryService;
+	
+	@Autowired
+	private ProductServiceImpl productService;
 	
 	@PostMapping("/saveCategory")
 	public ResponseEntity<CategoryDto>saveCategory(@RequestBody CategoryDto categoryDto)
@@ -75,6 +80,18 @@ public class CategoryController {
 	{
 		return categoryService.getAllCategory1();
 	}
+	
+	@GetMapping("/getAllProduct/{categoryId}")
+	public ResponseEntity<PageResponse<ProductDto>>getAllProduct(@PathVariable String categoryId,
+			@RequestParam(value = "pageNumber", defaultValue = "0", required = false)int pageNumber,
+			@RequestParam(value = "pageSize", defaultValue = "2", required = false)int pageSize,
+			@RequestParam(value = "sortBy", defaultValue ="product_title", required = false)String sortBy,
+			@RequestParam(value = "sortDir",defaultValue = "asc", required = false)String sortDir)
+	{
+		PageResponse<ProductDto>response = productService.getproductByCategory(categoryId, pageNumber, pageSize, sortBy, sortDir);
+		return new ResponseEntity<>(response, HttpStatus.OK);
+	}
+	
 	
 	
 

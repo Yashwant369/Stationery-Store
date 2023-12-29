@@ -4,6 +4,7 @@ import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -21,6 +22,9 @@ public class Product {
 	private boolean productLive;
 	private boolean productStock;
 	private String productImage;
+	
+	@ManyToOne
+	private Category category;
 	
 	
 
