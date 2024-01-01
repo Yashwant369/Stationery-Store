@@ -1,0 +1,21 @@
+package com.yashwant.stationerystore.entity;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import lombok.Data;
+
+@Entity
+@Data
+public class Cart {
+	
+	@Id
+	private String cartId;	
+	private Date createdDate;
+	@OneToOne;
+	private User user;
+	
+
+}

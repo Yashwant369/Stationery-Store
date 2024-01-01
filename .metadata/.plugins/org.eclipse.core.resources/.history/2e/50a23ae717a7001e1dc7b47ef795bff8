@@ -1,0 +1,8 @@
+package com.yashwant.stationerystore.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CartRepo extends JpaRepository<Cart, String> 
+{
+
+}

@@ -1,0 +1,5 @@
+package com.yashwant.stationerystore.entity;
+
+public class CartItem {
+
+}

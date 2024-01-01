@@ -1,0 +1,22 @@
+package com.yashwant.stationerystore.dtos;
+
+import java.util.Date;
+import java.util.List;
+
+import com.yashwant.stationerystore.entity.CartItem;
+import com.yashwant.stationerystore.entity.User;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import lombok.Data;
+
+@Data
+public class CartDto {
+	private String cartId;	
+	private Date createdDate;
+	private UserDto userDto;
+	private List<CartItem>cartItems;
+
+}

@@ -1,0 +1,13 @@
+package com.yashwant.stationerystore.entity;
+
+@Entity
+@Data
+public class Cart {
+	
+	@Id
+	private String cartId;	
+	private Date createdDate;
+	@One
+	private User user;
+
+}
