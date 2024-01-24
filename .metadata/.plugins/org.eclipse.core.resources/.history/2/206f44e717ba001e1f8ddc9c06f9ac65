@@ -1,0 +1,14 @@
+package com.yashwant.stationerystore.entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
+public class Role {
+	
+	@Id
+	private String roleId;
+	private String role
+
+}

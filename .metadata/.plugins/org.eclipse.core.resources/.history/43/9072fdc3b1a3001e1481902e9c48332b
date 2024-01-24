@@ -1,7 +1,0 @@
-package com.yashwant.stationerystore.service;
-
-public interface FileServie {
-	
-	public ApiResponse uploadImage(MultipartFile file, )
-
-}

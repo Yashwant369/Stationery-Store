@@ -14,5 +14,7 @@ public interface CartService
 	
 	CartDto getCart(String userId);
 	
+	CartDto updateCart(String userId, AddItemRequest request);
+	
 
 }

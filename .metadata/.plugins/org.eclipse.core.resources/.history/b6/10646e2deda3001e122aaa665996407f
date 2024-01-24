@@ -1,5 +1,0 @@
-package com.yashwant.stationerystore.repository;
-
-public interface CategoryRepo {
-
-}

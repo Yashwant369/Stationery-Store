@@ -1,4 +1,4 @@
-package com.yashwant.stationerystore.util;
+ package com.yashwant.stationerystore.util;
 
 import lombok.Data;
 

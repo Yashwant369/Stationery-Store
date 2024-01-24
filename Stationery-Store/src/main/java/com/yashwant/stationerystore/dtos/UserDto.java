@@ -1,5 +1,10 @@
 package com.yashwant.stationerystore.dtos;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.yashwant.stationerystore.entity.Role;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -21,6 +26,6 @@ public class UserDto {
 	@NotBlank(message = "Please Enter Password")
 	private String userPassword;
 	private String userImage;
-	
+	private Set<RoleDto>roles = new HashSet<>();
 
 }

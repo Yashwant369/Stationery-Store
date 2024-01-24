@@ -1,0 +1,9 @@
+package com.yashwant.stationerystore.dtos;
+
+@Data
+public class JwtRequest {
+	
+	private String email;
+	private String password;
+
+}

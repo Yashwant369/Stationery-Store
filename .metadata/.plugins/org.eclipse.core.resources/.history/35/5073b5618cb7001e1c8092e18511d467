@@ -1,0 +1,10 @@
+package com.yashwant.stationerystore.authentication;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class UtilClass {
+	
+	
+
+}

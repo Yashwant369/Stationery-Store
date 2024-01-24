@@ -1,8 +1,0 @@
-package com.yashwant.stationerystore.service;
-
-public interface CartService 
-{
-	CartDto addItem(String )
-	
-
-}

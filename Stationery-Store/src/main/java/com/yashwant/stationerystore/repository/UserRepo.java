@@ -17,4 +17,6 @@ public interface UserRepo extends JpaRepository<User,String>{
 	@Query(value = "select * from user where user_name = :name", nativeQuery = true)
 	Page<User> getUserByName(String name, Pageable pageable);
 
+	
+
 }

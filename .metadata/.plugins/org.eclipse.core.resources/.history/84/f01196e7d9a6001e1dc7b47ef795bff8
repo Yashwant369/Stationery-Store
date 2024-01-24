@@ -1,7 +1,0 @@
-package com.yashwant.stationerystore.entity;
-
-@Enity
-@Data
-public class CartItem {
-
-}

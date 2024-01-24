@@ -152,4 +152,10 @@ public class CartServiceImpl implements CartService {
 		return mapper.map(cart, CartDto.class);
 	}
 
+	@Override
+	public CartDto updateCart(String userId, AddItemRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

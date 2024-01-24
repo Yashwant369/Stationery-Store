@@ -1,8 +1,0 @@
-package com.yashwant.stationerystore.entity;
-
-@Entity
-@Data
-public class Category {
-
-	private 
-}
