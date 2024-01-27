@@ -42,6 +42,10 @@ public class SecurityConfig {
                 .permitAll()
                 .requestMatchers(HttpMethod.POST ,"/auth/register")
                 .permitAll()
+                .requestMatchers(HttpMethod.POST, "/users/uploadImage/{userId}")
+                .permitAll()
+                .requestMatchers(HttpMethod.PUT, "/users/updateUser/{userId}")
+                .permitAll()
                 .requestMatchers(HttpMethod.DELETE ,"/users/**").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.GET ,"/users/**").hasAuthority("Admin")
                
@@ -56,22 +60,6 @@ public class SecurityConfig {
         http.addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     	
-//    	http
-//        .authorizeHttpRequests(authorize -> authorize
-//            .requestMatchers("/auth/login").permitAll()
-//            .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-//            .requestMatchers(HttpMethod.DELETE, "/users/**").hasRole("Admin")
-//            .requestMatchers(HttpMethod.GET, "/users/**").hasRole("Admin")
-//            .anyRequest().authenticated()
-//        )
-//        .exceptionHandling(exceptionHandling -> exceptionHandling
-//            .authenticationEntryPoint(authenticationEntryPoint)
-//        )
-//        .sessionManagement(sessionManagement -> sessionManagement
-//            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//        )
-//        .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class);
-//    return http.build();
     }
     
     @Bean

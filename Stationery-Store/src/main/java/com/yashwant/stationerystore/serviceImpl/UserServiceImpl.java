@@ -61,34 +61,10 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
-//	private UserDto convertUserToDto(User newUser) {
-//		// TODO Auto-generated method stub
-//		UserDto userDto = new UserDto();
-//		userDto.setUserImage(newUser.getUserImage());
-//		userDto.setUserEmail(newUser.getUserEmail());
-//		userDto.setUserGender(newUser.getUserGender());
-//		userDto.setUserName(newUser.getUserName());
-//		userDto.setUserPassword(newUser.getUserPassword());
-//		userDto.setUserId(newUser.getUserId());
-//		return userDto;
-//	}
-
-//	private User convertDtoToUser(UserDto userDto) {
-//		// TODO Auto-generated method stub
-//		User user = new User();
-//		user.setUserEmail(userDto.getUserEmail());
-//		user.setUserGender(userDto.getUserGender());
-//		user.setUserId(userDto.getUserId());
-//		user.setUserImage(userDto.getUserImage());
-//		user.setUserName(userDto.getUserName());
-//		user.setUserPassword(userDto.getUserPassword());
-//		
-//		return user;
-//	}
-
 	@Override
 	public UserDto updateuser(UserDto userDto, String userId) {
 		// TODO Auto-generated method stub
+		userDto.setUserPassword(passwordEncoder.encode(userDto.getUserPassword()));
 		User user = userRepo.findById(userId).
 		orElseThrow(()-> new ResourceNotFoundException("User not found with given id : " + userId));
 		user.setUserName(userDto.getUserName());

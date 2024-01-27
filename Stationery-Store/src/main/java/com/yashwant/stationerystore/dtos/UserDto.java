@@ -3,8 +3,6 @@ package com.yashwant.stationerystore.dtos;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.yashwant.stationerystore.entity.Role;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

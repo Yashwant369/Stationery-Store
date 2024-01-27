@@ -1,7 +1,5 @@
 package com.yashwant.stationerystore.service;
 
-import java.util.List;
-
 import com.yashwant.stationerystore.dtos.UserDto;
 import com.yashwant.stationerystore.util.PageResponse;
 

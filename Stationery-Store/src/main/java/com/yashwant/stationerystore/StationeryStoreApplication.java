@@ -1,8 +1,6 @@
 package com.yashwant.stationerystore;
 
 import java.util.List;
-import java.util.UUID;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -32,20 +30,16 @@ public class StationeryStoreApplication implements CommandLineRunner{
 		try
 		{
 			Role role = new Role();
-			//String roleId1 = UUID.randomUUID().toString();
 			role.setRoleId("admin");
 			role.setRoleName("Admin");
 			
 			Role role1 = new Role();
-			//String roleId2 = UUID.randomUUID().toString();
 			role1.setRoleId("user");
 			role1.setRoleName("Normal_User");
 			
 			List<Role>roles = List.of(role,role1);
 			List<Role>result = this.roleRepo.saveAll(roles);
-//		    result.forEach(r->{
-//		    	System.out.println(r.getRoleName());
-//		    });
+
 		}
 		
 		catch(Exception e)
