@@ -1,7 +1,6 @@
 package com.yashwant.stationerystore.serviceImpl;
 
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -69,17 +68,7 @@ public class CartServiceImpl implements CartService {
 			
 		}
 		List<CartItem> items = cart.getCartItems();
-//	    if (items == null) {
-//	        // Initialize the items list if it is null
-//	        items = new ArrayList<>();
-//	        cart.setCartItems(items);
-//	    }
-		
-		
-		
-		
 		boolean isPresent = false;
-		
 		for(CartItem item : items)
 		{
 			if(item.getProduct().getProductId().equals(productId))
@@ -155,7 +144,52 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public CartDto updateCart(String userId, AddItemRequest request) {
 		// TODO Auto-generated method stub
-		return null;
+		int quantity = request.getQuantity();
+		if(quantity <= 0)
+		{
+			throw new BadRequestException("Quantiy of product should be greater than 0");
+		}
+		String productId = request.getProductId();
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Product not found for this id : " + productId));
+		User user = userRepo.findById(userId).orElseThrow(()-> 
+		new ResourceNotFoundException("User not found for this id : " + userId));
+		Cart cart = cartRepo.findUser(userId);
+		if(cart == null)
+		{
+
+			throw new BadRequestException("Cart is empty please add item before updating cart");
+			
+		}
+		List<CartItem> items = cart.getCartItems();
+		boolean isPresent = false;
+		for(CartItem item : items)
+		{
+			if(item.getProduct().getProductId().equals(productId))
+			{
+				item.setQuantity(quantity);
+				item.setTotalPrice(quantity*product.getProductDiscountPrice());
+				isPresent = true;
+				
+			}
+		}
+		
+		if(isPresent == false)
+		{
+			CartItem item = new CartItem();
+			String cartItemId = UUID.randomUUID().toString();
+			item.setCartItemId(cartItemId);
+			item.setQuantity(quantity);
+			item.setTotalPrice(quantity*product.getProductDiscountPrice());
+			item.setProduct(product);
+			item.setCart(cart);
+			items.add(item);
+			
+		}
+		Cart updatedCart = cartRepo.save(cart);
+		return mapper.map(updatedCart, CartDto.class);
+		
+		
 	}
 
 }
