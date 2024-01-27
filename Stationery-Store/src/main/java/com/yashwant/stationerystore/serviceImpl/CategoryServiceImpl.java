@@ -121,16 +121,6 @@ public class CategoryServiceImpl implements CategoryService {
 		}
 		return mapper.map(category, CategoryDto.class);
 	}
-	public List<CategoryDto>getAllCategory1()
-	{
-		List<Category>category = categoryRepo.findAll();		
-		List<CategoryDto>list = new ArrayList<>();
-		for(Category c : category)
-		{
-			CategoryDto cDto = mapper.map(c,CategoryDto.class);
-			list.add(cDto);
-		}
-		return list;
-	}
+	
 
 }

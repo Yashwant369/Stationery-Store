@@ -1,7 +1,5 @@
 package com.yashwant.stationerystore.service;
 
-import java.util.List;
-
 import com.yashwant.stationerystore.dtos.CategoryDto;
 import com.yashwant.stationerystore.util.ApiResponse;
 import com.yashwant.stationerystore.util.PageResponse;
@@ -13,7 +11,7 @@ public interface CategoryService {
 	public ApiResponse deleteCategory(String categoryId);
 	public CategoryDto getCategoryById(String categoryId);
 	public CategoryDto getCategoryByTitle(String title);
-	public List<CategoryDto>getAllCategory1();
+	
 	public PageResponse<CategoryDto> getAllCategory11(int pageNumber, int pageSize, String sortBy, String sortDir);
 	 
 

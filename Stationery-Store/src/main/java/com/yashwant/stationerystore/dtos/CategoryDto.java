@@ -1,9 +1,5 @@
 package com.yashwant.stationerystore.dtos;
 
-import java.util.List;
-
-import com.yashwant.stationerystore.entity.Product;
-
 import lombok.Data;
 
 @Data

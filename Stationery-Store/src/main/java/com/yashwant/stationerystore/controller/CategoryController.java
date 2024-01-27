@@ -75,11 +75,7 @@ public class CategoryController {
 		return new ResponseEntity<>(response,HttpStatus.OK);
 	}
 	
-	@GetMapping("/getAllCategory1")
-	public List<CategoryDto>getAllCategory1()
-	{
-		return categoryService.getAllCategory1();
-	}
+	
 	
 	@GetMapping("/getAllProduct/{categoryId}")
 	public ResponseEntity<PageResponse<ProductDto>>getAllProduct(@PathVariable String categoryId,

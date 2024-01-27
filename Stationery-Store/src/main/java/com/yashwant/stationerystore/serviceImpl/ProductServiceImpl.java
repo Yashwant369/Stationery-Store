@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 import com.yashwant.stationerystore.dtos.CategoryDto;
 import com.yashwant.stationerystore.dtos.ProductDto;
-import com.yashwant.stationerystore.entity.Category;
 import com.yashwant.stationerystore.entity.Product;
 import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
 import com.yashwant.stationerystore.repository.ProductRepo;
@@ -146,36 +145,6 @@ public class ProductServiceImpl implements ProductService {
 		// TODO Auto-generated method stub
 		Product product = productRepo.getProductByTitle(title);
 		return mapper.map(product, ProductDto.class);
-	}
-
-	@Override
-	public PageResponse<ProductDto> getByPrice(double price, int pageNumber, int pageSize, String sortBy, String sortDir) {
-		// TODO Auto-generated method stub
-		
-//		Sort sort = null;
-//		if(sortDir.equalsIgnoreCase("asc"))
-//		{
-//			sort = Sort.by(sortBy).ascending();
-//		}
-//		else 
-//		{
-//			
-//		}
-		
-		return null;
-	}
-
-	@Override
-	public PageResponse<ProductDto> getByDate(Date date, int pageNumber, int pageSize, String sortBy, String sortDir) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public PageResponse<ProductDto> getByLive(int pageNumber, int pageSize, String sortBy, String sortDir) {
-		// TODO Auto-generated method stub
-		
-		return null;
 	}
 
 	@Override

@@ -1,8 +1,5 @@
 package com.yashwant.stationerystore.service;
 
-import java.util.Date;
-import java.util.List;
-
 import com.yashwant.stationerystore.dtos.ProductDto;
 import com.yashwant.stationerystore.util.ApiResponse;
 import com.yashwant.stationerystore.util.PageResponse;
@@ -15,9 +12,6 @@ public interface ProductService {
 	ProductDto getById(String productId);
 	PageResponse<ProductDto>getAllProduct(int pageNumber, int pageSize, String sortBy, String sortDir);
 	ProductDto getByTitle(String title);
-	PageResponse<ProductDto>getByPrice(double price, int pageNumber, int pageSize, String sortBy, String sortDir);
-	PageResponse<ProductDto>getByDate(Date date, int pageNumber, int pageSize, String sortBy, String sortDir);
-	PageResponse<ProductDto>getByLive(int pageNumber, int pageSize, String sortBy, String sortDir);
 	ProductDto saveProductWithCategory(ProductDto productDto, String categoryId);
 	PageResponse<ProductDto>getproductByCategory(String categoryId, int pageNumber, int pageSize, String sortBy, String sortDir);
 	
