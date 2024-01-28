@@ -1,8 +1,0 @@
-package com.yashwant.stationerystore.dtos;
-
-public class JwtRequest {
-	
-	private String email;
-	
-
-}

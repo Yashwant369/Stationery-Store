@@ -9,15 +9,11 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-import com.yashwant.stationerystore.entity.User;
 
 @Configuration
 public class SecurityConfig {
@@ -46,6 +42,8 @@ public class SecurityConfig {
                 .permitAll()
                 .requestMatchers(HttpMethod.PUT, "/users/updateUser/{userId}")
                 .permitAll()
+                .requestMatchers(HttpMethod.GET ,"/order/getUserOrder/{userId}")
+                .permitAll()
                 .requestMatchers(HttpMethod.DELETE ,"/users/**").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.GET ,"/users/**").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.POST ,"/category/**").hasAuthority("Admin")
@@ -60,6 +58,10 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE ,"/cart/**").hasAuthority("Normal_User")
                 .requestMatchers(HttpMethod.GET ,"/cart/**").hasAuthority("Normal_User")
                 .requestMatchers(HttpMethod.PUT ,"/cart/**").hasAuthority("Normal_User")
+                .requestMatchers(HttpMethod.POST ,"/order/createOrder").hasAuthority("Normal_User")
+                .requestMatchers(HttpMethod.DELETE ,"/order/deleteOrder/{orderId}").hasAuthority("Normal_User")
+                .requestMatchers(HttpMethod.GET ,"/order/getAllOrder").hasAuthority("Admin")
+                .requestMatchers(HttpMethod.PUT ,"/order/updateOrder/{orderId}").hasAuthority("Admin")
                 .anyRequest()
                 .authenticated()
                 .and()

@@ -130,9 +130,17 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	public OrderDto updateOrder(OrderRequest request) {
+	public OrderDto updateOrder(String orderId) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		Orders order = orderRepo.findById(orderId).orElseThrow(()-> new 
+				ResourceNotFoundException("order not found"));
+		order.setOrderStatus("Delivered");
+		order.setPaymentStatus("Done");
+		return mapper.map(order, OrderDto.class);
+
+		
+		
 	}
 	
 	

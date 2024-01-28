@@ -12,6 +12,6 @@ public interface OrderService {
 	ApiResponse removeOrder(String orderId);
 	List<OrderDto>getUserOrder(String userId);
 	List<OrderDto>getAllOrder();
-	OrderDto updateOrder(OrderRequest request);
+	OrderDto updateOrder(String orderId);
 
 }

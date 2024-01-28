@@ -1,6 +1,0 @@
-package com.yashwant.stationerystore.dtos;
-
-@Data
-public class JwtResponse {
-
-}
