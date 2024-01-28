@@ -1,0 +1,16 @@
+package com.yashwant.stationerystore.configuration;
+
+import org.springframework.context.annotation.Configuration;
+
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+
+@Configuration
+public class SwaggerConfiguration {
+	
+	public Docket getDocket()
+	{
+		return new Docket(DocumentationType.SWAGGER_2)
+	}
+
+}

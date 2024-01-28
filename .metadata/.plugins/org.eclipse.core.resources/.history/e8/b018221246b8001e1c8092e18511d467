@@ -1,7 +1,0 @@
-package com.yashwant.stationerystore.serviceImpl;
-
-import org.springframework.security.core.userdetails.UserDetailsService;
-
-public class CustomUserDetailService implements UserDetailsService{
-
-}

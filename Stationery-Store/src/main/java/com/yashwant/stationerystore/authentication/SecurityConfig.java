@@ -26,6 +26,7 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthenticationFilter authenticationFilter;
     
+  
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
@@ -34,8 +35,10 @@ public class SecurityConfig {
                 .cors()
                 .disable()
                 .authorizeRequests()
+            
                 .requestMatchers("/auth/login")
                 .permitAll()
+           
                 .requestMatchers(HttpMethod.POST ,"/auth/register")
                 .permitAll()
                 .requestMatchers(HttpMethod.POST, "/users/uploadImage/{userId}")
@@ -43,7 +46,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PUT, "/users/updateUser/{userId}")
                 .permitAll()
                 .requestMatchers(HttpMethod.GET ,"/order/getUserOrder/{userId}")
-                .permitAll()
+                .permitAll()  
+        
                 .requestMatchers(HttpMethod.DELETE ,"/users/**").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.GET ,"/users/**").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.POST ,"/category/**").hasAuthority("Admin")
@@ -62,6 +66,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE ,"/order/deleteOrder/{orderId}").hasAuthority("Normal_User")
                 .requestMatchers(HttpMethod.GET ,"/order/getAllOrder").hasAuthority("Admin")
                 .requestMatchers(HttpMethod.PUT ,"/order/updateOrder/{orderId}").hasAuthority("Admin")
+                
                 .anyRequest()
                 .authenticated()
                 .and()
