@@ -82,9 +82,13 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 - JWT Token Concept: Authentication is handled using JWT tokens.
 - Token Validation: Authentication filter validates tokens with each request.
 
-## Screenshot
+## Screenshots
 - User Registration :
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/97246d00-a1bc-4ad1-830c-6bd5866bdd3f)
+
+- User Login :
+- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3a68b1a-cec4-4d13-9e03-a800f57ccfd6)
+
 
 
 
