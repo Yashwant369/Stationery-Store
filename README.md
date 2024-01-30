@@ -87,49 +87,77 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/97246d00-a1bc-4ad1-830c-6bd5866bdd3f)
 
 - User Login 
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3a68b1a-cec4-4d13-9e03-a800f57ccfd6)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3a68b1a-cec4-4d13-9e03-a800f57ccfd6)
 
 - Upload User Image
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/08d5e6e2-5ea7-46fe-9273-85b2ffc1e109)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/08d5e6e2-5ea7-46fe-9273-85b2ffc1e109)
 
 - Normal User fetching Admin Url
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/10f9ae47-b173-42f9-ad88-911aaf751eb5)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/10f9ae47-b173-42f9-ad88-911aaf751eb5)
 
 - Admin Urls
 
 - Login
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3323431-d78c-40d6-9e71-04f866b458f7)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3323431-d78c-40d6-9e71-04f866b458f7)
 
 - Get all users
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dca7b651-8031-4abf-843b-a42f9b8b8e4c)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dca7b651-8031-4abf-843b-a42f9b8b8e4c)
 
 - Get user by id
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8313b9a6-de45-459b-82c7-31096cbd20b1)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8313b9a6-de45-459b-82c7-31096cbd20b1)
 
 - Get user by email
 - ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/4cc267ef-978c-4a9c-bd9e-906e83a06762)
 
 - Delete user
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b818a241-86b6-465c-a6cb-8a66c8d788ff)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b818a241-86b6-465c-a6cb-8a66c8d788ff)
 
 - Update user
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/69bea91d-2e0a-43cf-b1cb-2c1785a9351e)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/69bea91d-2e0a-43cf-b1cb-2c1785a9351e)
 
 - Category Module
 - Add Category
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/3ec54400-a26c-4713-b53e-ce9f5a05f125)
 
 - Get Category by title
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f629b1c2-91b0-41ee-ac7b-d28039b1da36)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f629b1c2-91b0-41ee-ac7b-d28039b1da36)
 
 - Get all category
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/eda66d89-3b57-4254-94f3-9e3930712247)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/eda66d89-3b57-4254-94f3-9e3930712247)
 
 - Update category
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/313cf7a4-0e7a-4545-ab32-64b55e6959c9)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/313cf7a4-0e7a-4545-ab32-64b55e6959c9)
 
 - Delete category
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dcdca08a-ec76-43cf-9c51-d4575ccfc55a)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dcdca08a-ec76-43cf-9c51-d4575ccfc55a)
+
+- Product Module
+
+- Add product along with category
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/975770a6-15f4-48dd-8b14-6fabf2bd9b9e)
+
+- Upload product image
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/e192170f-3a06-4b2a-a35a-5a8f2a53dd0e)
+
+- Get all product
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/07c3e352-2d92-491f-803c-464bffe7d68e)
+
+- Get product by id
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f969286a-d62e-42ad-8a1b-4bcf347e532b)
+
+- Update Product
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/c7a03c9d-f9e5-4114-976d-3fd709767a6d)
+
+- Delete product
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/737963dd-47d2-499a-97ca-fad153b08d15)
+
+- 
+
+
+
+
+
+
 
 
 
