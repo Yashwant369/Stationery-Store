@@ -1,7 +1,7 @@
-# Stationery Store
+# E-Commerce Based Backend Application
 
 ## Project Description
-Stationery Store is a REST API for an e-commerce backend application developed using the Spring Boot framework. The project comprises several modules catering to user, admin, categories, products, cart, and orders. Users can register, login, browse products, add them to cart, and place orders. Admins have additional privileges such as managing categories, products, and orders.
+E-Commerce Based Backend Application is a REST API developed using the Spring Boot framework. The project comprises several modules catering to user, admin, categories, products, cart, and orders. Users can register, login, browse products, add them to cart, and place orders. Admins have additional privileges such as managing categories, products, and orders.
 
 ## Modules
 
