@@ -55,6 +55,7 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 5. Update cart
 
 ### Order Module
+- **User Authorization:** Only authenticated users can access this module.
 1. Create order
 2. Get order details of user
 3. Get all orders
