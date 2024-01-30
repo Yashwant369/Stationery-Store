@@ -1,8 +1,15 @@
 # E-Commerce Based Backend Application
 
 ## Project Description
-E-Commerce Based Backend Application is a REST API for an e-commerce backend application developed using the Spring Boot framework. The project comprises several modules catering to user, admin, categories, products, cart, and orders. Users can register, login, browse products, add them to cart, and place orders. Admins have additional privileges such as managing categories, products, and orders.
+E-Commerce Based Backend Application is a REST API developed using the Spring Boot framework. The project comprises several modules catering to user, admin, categories, products, cart, and orders. Users can register, login, browse products, add them to cart, and place orders. Admins have additional privileges such as managing categories, products, and orders.
 
+## Tech Stack
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- MySQL
+- Spring Security
 
 ## Modules
 
@@ -75,3 +82,9 @@ E-Commerce Based Backend Application is a REST API for an e-commerce backend app
 - JWT Token Concept: Authentication is handled using JWT tokens.
 - Token Validation: Authentication filter validates tokens with each request.
 
+## Screenshot
+[Add screenshot here]
+
+This README provides an overview of the project, its modules, functionalities, and implementation details for potential users and contributors.
+
+**Made by [Yashwant369](https://github.com/Yashwant369)**
