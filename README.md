@@ -107,7 +107,7 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8313b9a6-de45-459b-82c7-31096cbd20b1)
 
 - Get user by email
-- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/4cc267ef-978c-4a9c-bd9e-906e83a06762)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/4cc267ef-978c-4a9c-bd9e-906e83a06762)
 
 - Delete user
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b818a241-86b6-465c-a6cb-8a66c8d788ff)
@@ -151,31 +151,37 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 - Delete product
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/737963dd-47d2-499a-97ca-fad153b08d15)
 
-- 
+- Cart Module(User has authority to access urls)
 
+- Add item to cart
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/557e36f2-5266-4e5f-b213-f36773aa7840)
 
+- Remove item from cart
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/9935432e-3e23-4e42-9ef0-6831ea8ff0a0)
 
+- Update cart
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/0601abb5-cd5e-4c4c-98f2-f39e9012d80d)
 
+- Clear cart
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/ee1683a8-8fe3-4ac9-b66a-e6b3bda15700)
 
+- Get cart of user
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/bcb6b4d0-8257-43d5-a006-9f90fb278ba4)
 
-
-
-
-
-
-
-
-
-
-
-
-
+- Order Module(User has authority to access urls)
+- Create order
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8920e3f1-18c6-43ab-b543-dd4bf6febbd5)
   
+- Get order details
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/121be084-8095-4dc2-9cc9-cd05b3ff0c92)
 
+- Get all orders
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f481359e-0512-4eda-8c83-5fc698cd17ed)
 
+- Update Order
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/44a8d367-8d35-4af2-81cc-4c9147d04b35)
 
-
-
-
+- Cancel order
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/264fd0c8-d21b-4f44-9bde-23358d47e729)
 
 **Made by [Yashwant369](https://github.com/Yashwant369)**
