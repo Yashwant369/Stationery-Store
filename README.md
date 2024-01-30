@@ -83,8 +83,10 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 - Token Validation: Authentication filter validates tokens with each request.
 
 ## Screenshot
-[Add screenshot here]
+- User Registration :
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/97246d00-a1bc-4ad1-830c-6bd5866bdd3f)
 
-This README provides an overview of the project, its modules, functionalities, and implementation details for potential users and contributors.
+
+
 
 **Made by [Yashwant369](https://github.com/Yashwant369)**
