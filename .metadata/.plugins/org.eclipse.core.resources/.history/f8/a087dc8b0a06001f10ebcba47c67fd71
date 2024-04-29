@@ -1,0 +1,8 @@
+package com.yashwant.stationerystore.dtos;
+
+import lombok.Data;
+
+@Data
+public class OrderPayment {
+
+}

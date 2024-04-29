@@ -1,0 +1,6 @@
+package com.yashwant.stationerystore.util;
+
+@dData
+public class OrderResponse {
+
+}

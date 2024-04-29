@@ -1,0 +1,6 @@
+package com.yashwant.stationerystore.controller;
+
+@Controller
+public class PaymentController {
+
+}

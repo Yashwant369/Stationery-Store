@@ -1,0 +1,204 @@
+package com.yashwant.stationerystore.serviceImpl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.yashwant.stationerystore.dtos.OrderDto;
+import com.yashwant.stationerystore.entity.Cart;
+import com.yashwant.stationerystore.entity.CartItem;
+import com.yashwant.stationerystore.entity.OrderItem;
+import com.yashwant.stationerystore.entity.Orders;
+import com.yashwant.stationerystore.entity.User;
+import com.yashwant.stationerystore.exceptions.BadRequestException;
+import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
+import com.yashwant.stationerystore.repository.CartRepo;
+import com.yashwant.stationerystore.repository.OrderRepo;
+import com.yashwant.stationerystore.repository.UserRepo;
+import com.yashwant.stationerystore.service.OrderService;
+import com.yashwant.stationerystore.util.ApiResponse;
+import com.yashwant.stationerystore.util.OrderItemResponse;
+import com.yashwant.stationerystore.util.OrderRequest;
+import com.yashwant.stationerystore.util.OrderResponse;
+
+@Service
+public class OrderServiceImpl implements OrderService {
+	
+	@Autowired
+	private OrderRepo orderRepo;
+	
+	@Autowired
+	private UserRepo userRepo;
+	
+	@Autowired
+	private CartRepo cartRepo;
+	
+	@Autowired
+	private ModelMapper mapper;
+
+	@Override
+	public OrderResponse createOrder(OrderRequest request) {
+		// TODO Auto-generated method stub
+		User user = userRepo.findById(request.getUserId()).orElseThrow(()-> new 
+				ResourceNotFoundException("User not found for given id" + request.getUserId()));
+		Cart cart = cartRepo.findUser(request.getUserId());
+		if(cart == null)
+		{
+			throw new ResourceNotFoundException("Cart not found for given user");
+		}
+		List<CartItem>items = cart.getCartItems();
+		if(items.size() == 0)
+		{
+			throw new BadRequestException("No cart items found for user");
+		}
+		Orders order = new Orders();
+		String orderId = UUID.randomUUID().toString();
+		order.setOrderId(orderId);
+		order.setOrderDate(new Date());
+		order.setBillingName(request.getBillingName());
+		order.setOrderAddress(request.getOrderAddress());
+		order.setOrderStatus(request.getOrderStatus());
+		order.setPaymentStatus(request.getPaymentStatus());
+		order.setPhoneNumber(request.getPhoneNumber());
+		order.setUser(user);
+		double amount = 0;
+		List<OrderItem>list = order.getOrderItems();
+		for(CartItem item : items)
+		{
+			OrderItem orderItem = new OrderItem();
+			orderItem.setOrderQuantity(item.getQuantity());
+			orderItem.setOrder(order);
+			orderItem.setProductId(item.getProduct().getProductId());
+			orderItem.setProductName(item.getProduct().getProductTitle());
+			orderItem.setTotalPrice(item.getQuantity()*item.getProduct().getProductDiscountPrice());
+			amount += item.getQuantity()*item.getProduct().getProductDiscountPrice();
+			list.add(orderItem);
+		}
+		order.setOrderAmount(amount);
+		order.setOrderItems(list);
+		cart.getCartItems().clear();
+		cartRepo.save(cart);
+		Orders newOrder = orderRepo.save(order);
+		
+		OrderResponse response = new OrderResponse();
+		response.setOrderId(newOrder.getOrderId());
+		response.setBillingName(newOrder.getBillingName());
+		response.setDeliveryDate(newOrder.getDeliveryDate());
+		response.setOrderAddress(newOrder.getOrderAddress());
+		response.setOrderAmount(newOrder.getOrderAmount());
+		response.setOrderDate(newOrder.getOrderDate());
+		response.setOrderStatus(newOrder.getOrderStatus());
+		response.setPaymentStatus(newOrder.getPaymentStatus());
+		response.setPhoneNumber(newOrder.getPhoneNumber());
+		
+		List<OrderItemResponse>oir = response.getOrderItem();
+		List<OrderItem>oi = newOrder.getOrderItems();
+		for(OrderItem i : oi)
+		{
+			OrderItemResponse res = new OrderItemResponse();
+			res.setOrderItemId(Integer.toString(i.getOrderItemId()));
+			res.setOrderQuantity(i.getOrderQuantity());
+			res.setProductId(i.getProductId());
+			res.setProductTitle(i.getProductName());
+			res.setTotalPrice(i.getTotalPrice());
+			oir.add(res);
+		}
+		response.setOrderItem(oir);		
+		return response;
+	}
+
+	@Override
+	public ApiResponse removeOrder(String orderId) {
+		// TODO Auto-generated method stub
+		Orders order = orderRepo.findById(orderId).orElseThrow(()-> 
+		new ResourceNotFoundException("Order not found for given orderId" + orderId));
+		orderRepo.delete(order);
+		ApiResponse response = new ApiResponse();
+		response.setMessage("Order deleted");
+		response.setSuccess(true);
+		response.setStatus(HttpStatus.OK);
+		return response;
+	}
+
+	@Override
+	public List<OrderResponse> getUserOrder(String userId) {
+		// TODO Auto-generated method stub
+		User user = userRepo.findById(userId).orElseThrow(()-> new 
+				ResourceNotFoundException("User not found for given id" + userId));
+		List<Orders>orders = orderRepo.findByUser(user);
+		List<OrderDto>list = new ArrayList<>();
+		for(Orders o : orders)
+		{
+			OrderDto oDto = mapper.map(o, OrderDto.class);
+			list.add(oDto);
+		}
+		List<OrderResponse>response = new ArrayList<>();
+		return response;
+	}
+
+	@Override
+	public List<OrderResponse> getAllOrder() {
+		// TODO Auto-generated method stub
+		List<Orders>orders = orderRepo.findAll();
+		List<OrderDto>list = new ArrayList<>();
+		for(Orders o : orders)
+		{
+			OrderDto oDto = mapper.map(o, OrderDto.class);
+			list.add(oDto);
+		}
+		List<OrderResponse>response = new ArrayList<>();
+		return response;
+		
+	}
+
+	@Override
+	public OrderResponse updateOrder(String orderId) {
+		// TODO Auto-generated method stub
+		
+		Orders order = orderRepo.findById(orderId).orElseThrow(()-> new 
+				ResourceNotFoundException("order not found"));
+		order.setOrderStatus("Delivered");
+		order.setPaymentStatus("Done");
+		Orders newOrder = orderRepo.save(order);
+		OrderResponse response = new OrderResponse();
+		response.setOrderId(newOrder.getOrderId());
+		response.setBillingName(newOrder.getBillingName());
+		response.setDeliveryDate(newOrder.getDeliveryDate());
+		response.setOrderAddress(newOrder.getOrderAddress());
+		response.setOrderAmount(newOrder.getOrderAmount());
+		response.setOrderDate(newOrder.getOrderDate());
+		response.setOrderStatus(newOrder.getOrderStatus());
+		response.setPaymentStatus(newOrder.getPaymentStatus());
+		response.setPhoneNumber(newOrder.getPhoneNumber());
+		
+		List<OrderItemResponse>oir = response.getOrderItem();
+		List<OrderItem>oi = newOrder.getOrderItems();
+		for(OrderItem i : oi)
+		{
+			OrderItemResponse res = new OrderItemResponse();
+			res.setOrderItemId(Integer.toString(i.getOrderItemId()));
+			res.setOrderQuantity(i.getOrderQuantity());
+			res.setProductId(i.getProductId());
+			res.setProductTitle(i.getProductName());
+			res.setTotalPrice(i.getTotalPrice());
+			oir.add(res);
+		}
+		response.setOrderItem(oir);		
+		return response;
+		
+		
+
+		
+		
+	}
+	
+	
+	
+
+}

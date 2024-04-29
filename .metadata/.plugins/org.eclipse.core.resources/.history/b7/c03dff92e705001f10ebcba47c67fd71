@@ -1,0 +1,20 @@
+package com.yashwant.stationerystore.service;
+
+import com.yashwant.stationerystore.dtos.CartDto;
+import com.yashwant.stationerystore.util.AddItemRequest;
+import com.yashwant.stationerystore.util.ApiResponse;
+
+public interface CartService 
+{
+	Cart addItem(String userId, AddItemRequest request);
+	
+	ApiResponse removeItem(String cartItemId);
+	
+	ApiResponse clearCart(String userId);
+	
+	CartDto getCart(String userId);
+	
+	CartDto updateCart(String userId, AddItemRequest request);
+	
+
+}

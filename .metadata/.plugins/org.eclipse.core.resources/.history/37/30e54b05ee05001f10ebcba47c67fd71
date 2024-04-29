@@ -1,0 +1,259 @@
+package com.yashwant.stationerystore.serviceImpl;
+
+
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.yashwant.stationerystore.dtos.CartDto;
+import com.yashwant.stationerystore.entity.Cart;
+import com.yashwant.stationerystore.entity.CartItem;
+import com.yashwant.stationerystore.entity.Product;
+import com.yashwant.stationerystore.entity.User;
+import com.yashwant.stationerystore.exceptions.BadRequestException;
+import com.yashwant.stationerystore.exceptions.ResourceNotFoundException;
+import com.yashwant.stationerystore.repository.CartItemRepo;
+import com.yashwant.stationerystore.repository.CartRepo;
+import com.yashwant.stationerystore.repository.ProductRepo;
+import com.yashwant.stationerystore.repository.UserRepo;
+import com.yashwant.stationerystore.service.CartService;
+import com.yashwant.stationerystore.util.AddItemRequest;
+import com.yashwant.stationerystore.util.ApiResponse;
+import com.yashwant.stationerystore.util.CartItemResponse;
+import com.yashwant.stationerystore.util.CartResponse;
+
+@Service
+public class CartServiceImpl implements CartService {
+
+	@Autowired
+	private ProductRepo productRepo;
+	
+	@Autowired 
+	private UserRepo userRepo;
+	
+	@Autowired
+	private CartRepo cartRepo;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	@Autowired
+	private CartItemRepo cartItemRepo;
+	
+	
+	@Override
+	public CartResponse addItem(String userId, AddItemRequest request) {
+		// TODO Auto-generated method stub
+		int quantity = request.getQuantity();
+		if(quantity <= 0)
+		{
+			throw new BadRequestException("Quantiy of product should be greater than 0");
+		}
+		String productId = request.getProductId();
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Product not found for this id : " + productId));
+		User user = userRepo.findById(userId).orElseThrow(()-> 
+		new ResourceNotFoundException("User not found for this id : " + userId));
+		Cart cart = cartRepo.findUser(userId);
+		String cartId = "";
+		if(cart == null)
+		{
+			cart = new Cart();
+			cart.setCreatedDate(new Date());
+			cartId = UUID.randomUUID().toString();
+			cart.setCartId(cartId);
+			cart.setUser(user);
+			
+		}
+		List<CartItem> items = cart.getCartItems();
+		boolean isPresent = false;
+		for(CartItem item : items)
+		{
+			if(item.getProduct().getProductId().equals(productId))
+			{
+				int quant = item.getQuantity() + quantity;
+				item.setQuantity(quant);
+				item.setTotalPrice(qu*product.getProductDiscountPrice());
+				isPresent = true;
+				
+			}
+		}
+		
+		if(isPresent == false)
+		{
+			CartItem item = new CartItem();
+			String cartItemId = UUID.randomUUID().toString();
+			item.setCartItemId(cartItemId);
+			item.setQuantity(quantity);
+			item.setTotalPrice(quantity*product.getProductDiscountPrice());
+			item.setProduct(product);
+			item.setCart(cart);
+			items.add(item);
+			
+		}
+		Cart updatedCart = cartRepo.save(cart);
+		CartResponse cartResponse = new CartResponse();
+		cartResponse.setCartId(updatedCart.getCartId());
+		cartResponse.setCreatedDate(new Date());
+		cartResponse.setUserId(userId);
+		cartResponse.setUserName(user.getUsername());
+		List<CartItemResponse>it = cartResponse.getCartItems();
+		List<CartItem>products = updatedCart.getCartItems();
+		for(CartItem i : products)
+		{
+			CartItemResponse response = new CartItemResponse();
+			response.setCartItemId(i.getCartItemId());
+			response.setProductId(i.getProduct().getProductId());
+			response.setProductName(i.getProduct().getProductTitle());
+			response.setQuantity(i.getQuantity());
+			response.setTotalPrice(i.getTotalPrice());
+			it.add(response);
+			
+		}
+		cartResponse.setCartItems(it);
+		return cartResponse;
+	}
+
+	@Override
+	public ApiResponse removeItem(String cartItemId) {
+		// TODO Auto-generated method stub
+		CartItem item = cartItemRepo.findById(cartItemId).orElseThrow(()-> new ResourceNotFoundException
+				("Resource Not found for given id : " + cartItemId));
+		cartItemRepo.delete(item);
+		ApiResponse response = new ApiResponse();
+		response.setMessage("Cart Item deleted ");
+		response.setSuccess(true);
+		response.setStatus(HttpStatus.OK);		
+		return response;
+	}
+
+	@Override
+	public ApiResponse clearCart(String userId) {
+		// TODO Auto-generated method stub
+		User user = userRepo.findById(userId).orElseThrow(()-> 
+		new ResourceNotFoundException("User not found for this id : " + userId));
+		Cart cart = cartRepo.findUser(userId);
+		if(cart == null)
+		{
+			throw new ResourceNotFoundException("Resource not found for cart");
+		}
+		cart.getCartItems().clear();
+		Cart updatedCart = cartRepo.save(cart);
+		ApiResponse response = new ApiResponse();
+		response.setMessage("Cart Cleared");
+		response.setSuccess(true);
+		response.setStatus(HttpStatus.OK);		
+		return response;
+	}
+
+	@Override
+	public CartResponse getCart(String userId) {
+		// TODO Auto-generated method stub
+		User user = userRepo.findById(userId).orElseThrow(()-> 
+		new ResourceNotFoundException("User not found for this id : " + userId));
+		Cart cart = cartRepo.findUser(userId);
+		if(cart == null)
+		{
+			throw new ResourceNotFoundException("Resource not found for cart");
+		}
+		CartResponse cartResponse = new CartResponse();
+		cartResponse.setCartId(cart.getCartId());
+		
+		cartResponse.setCreatedDate(cart.getCreatedDate());
+		cartResponse.setUserId(userId);
+		cartResponse.setUserName(user.getUsername());
+		List<CartItemResponse>it = cartResponse.getCartItems();
+		List<CartItem>products = cart.getCartItems();
+		for(CartItem i : products)
+		{
+			CartItemResponse response = new CartItemResponse();
+			response.setCartItemId(i.getCartItemId());
+			response.setProductId(i.getProduct().getProductId());
+			response.setProductName(i.getProduct().getProductTitle());
+			response.setQuantity(i.getQuantity());
+			response.setTotalPrice(i.getTotalPrice());
+			it.add(response);
+			
+		}
+		cartResponse.setCartItems(it);
+		return cartResponse;
+		
+	}
+	@Override
+	public CartResponse updateCart(String userId, AddItemRequest request) {
+		// TODO Auto-generated method stub
+		int quantity = request.getQuantity();
+		if(quantity <= 0)
+		{
+			throw new BadRequestException("Quantiy of product should be greater than 0");
+		}
+		String productId = request.getProductId();
+		Product product = productRepo.findById(productId).orElseThrow(()-> 
+		new ResourceNotFoundException("Product not found for this id : " + productId));
+		User user = userRepo.findById(userId).orElseThrow(()-> 
+		new ResourceNotFoundException("User not found for this id : " + userId));
+		Cart cart = cartRepo.findUser(userId);
+		if(cart == null)
+		{
+
+			throw new BadRequestException("Cart is empty please add item before updating cart");
+			
+		}
+		List<CartItem> items = cart.getCartItems();
+		boolean isPresent = false;
+		for(CartItem item : items)
+		{
+			if(item.getProduct().getProductId().equals(productId))
+			{
+				item.setQuantity(quantity);
+				item.setTotalPrice(quantity*product.getProductDiscountPrice());
+				isPresent = true;
+				
+			}
+		}
+		
+		if(isPresent == false)
+		{
+			CartItem item = new CartItem();
+			String cartItemId = UUID.randomUUID().toString();
+			item.setCartItemId(cartItemId);
+			item.setQuantity(quantity);
+			item.setTotalPrice(quantity*product.getProductDiscountPrice());
+			item.setProduct(product);
+			item.setCart(cart);
+			items.add(item);
+			
+		}
+		Cart updatedCart = cartRepo.save(cart);
+		CartResponse cartResponse = new CartResponse();
+		cartResponse.setCartId(updatedCart.getCartId());
+		
+		cartResponse.setCreatedDate(new Date());
+		cartResponse.setUserId(userId);
+		cartResponse.setUserName(user.getUsername());
+		List<CartItemResponse>it = cartResponse.getCartItems();
+		List<CartItem>products = updatedCart.getCartItems();
+		for(CartItem i : products)
+		{
+			CartItemResponse response = new CartItemResponse();
+			response.setCartItemId(i.getCartItemId());
+			response.setProductId(i.getProduct().getProductId());
+			response.setProductName(i.getProduct().getProductTitle());
+			response.setQuantity(i.getQuantity());
+			response.setTotalPrice(i.getTotalPrice());
+			it.add(response);
+			
+		}
+		cartResponse.setCartItems(it);
+		return cartResponse;
+		
+		
+		
+	}
+
+}

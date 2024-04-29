@@ -1,0 +1,17 @@
+package com.yashwant.stationerystore.configuration;
+
+import org.springframework.context.annotation.Configuration;
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import com.paypal.base.rest.APIContext;
+import com.paypal.base.rest.OAuthTokenCredential;
+import com.paypal.base.rest.PayPalRESTException;
+
+@Configuration
+public class PayPalConfig 
+{
+	
+
+}

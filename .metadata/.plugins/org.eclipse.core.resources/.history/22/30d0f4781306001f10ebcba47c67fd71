@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body {
+  font-family: Arial, sans-serif; /* Added sans-serif as a fallback */
+  font-size: 16px; /* Reduced font size for better readability */
+  line-height: 1.6; /* Improved line height for better spacing */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+.container {
+  max-width: 600px; /* Adjusted container width for better readability */
+  margin: 0 auto; /* Centering the container horizontally */
+  padding: 20px; /* Added padding to the container */
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px; /* Reduced input padding */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Increased border radius for a softer look */
+  box-sizing: border-box; /* Added box-sizing to include padding in width calculation */
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin-top: 20px; /* Increased top margin for better spacing */
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjusted font size for better consistency */
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="/pay">
+        <h3 style="text-align: center;">Payment</h3>
+        <label for="price">Total</label>
+        <input type="text" id="price" name="price" th:value="${totalPrice}" readonly>
+        <label for="currency">Currency</label>
+        <input type="text" id="currency" name="currency" placeholder="Enter Currency" required>
+        <label for="method">Payment Method</label>
+        <input type="text" id="method" name="method" placeholder="Payment Method" value = "Paypal" readonly>
+        <label for="intent">Intent</label>
+        <input type="text" id="intent" name="intent" value="sale">
+        <label for="description">Payment Description</label>
+        <input type="text" id="description" name="description" placeholder="Payment Description">
+        <input type="submit" value="Continue to checkout" class="btn">
+    </form>
+</div>
+</body>
+</html>

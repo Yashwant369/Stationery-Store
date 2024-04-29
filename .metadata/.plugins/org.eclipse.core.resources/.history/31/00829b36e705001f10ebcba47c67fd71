@@ -1,0 +1,11 @@
+package com.yashwant.stationerystore.util;
+
+import lombok.Data;
+
+@Data
+public class CartResponse {
+	
+	private String cartId;
+	private Date 
+
+}

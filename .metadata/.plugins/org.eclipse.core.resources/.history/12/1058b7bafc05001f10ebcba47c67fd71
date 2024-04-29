@@ -1,0 +1,17 @@
+package com.yashwant.stationerystore.service;
+
+import java.util.List;
+
+import com.yashwant.stationerystore.dtos.OrderDto;
+import com.yashwant.stationerystore.util.ApiResponse;
+import com.yashwant.stationerystore.util.OrderRequest;
+
+public interface OrderService {
+	
+	Order createOrder(OrderRequest request);
+	ApiResponse removeOrder(String orderId);
+	List<OrderDto>getUserOrder(String userId);
+	List<OrderDto>getAllOrder();
+	OrderDto updateOrder(String orderId);
+
+}

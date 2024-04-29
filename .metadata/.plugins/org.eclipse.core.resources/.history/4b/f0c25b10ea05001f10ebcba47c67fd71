@@ -1,0 +1,23 @@
+package com.yashwant.stationerystore.util;
+
+import com.yashwant.stationerystore.entity.Cart;
+import com.yashwant.stationerystore.entity.Product;
+
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import lombok.Data;
+
+@Data
+public class CartItemResponse {
+	
+	
+	private String cartItemId;
+	private String 
+	private String productName; product;
+	private int quantity;
+	private double totalPrice;
+	@ManyToOne
+	private Cart cart;
+
+}

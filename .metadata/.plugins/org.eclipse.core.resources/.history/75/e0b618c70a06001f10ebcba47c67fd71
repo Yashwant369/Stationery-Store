@@ -1,0 +1,8 @@
+package com.yashwant.stationerystore.configuration;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class PayPalConfig {
+
+}

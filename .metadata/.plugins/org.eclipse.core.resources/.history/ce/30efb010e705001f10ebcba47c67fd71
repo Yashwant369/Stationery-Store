@@ -1,0 +1,6 @@
+package com.yashwant.stationerystore.util;
+
+@Data
+public class CartResponse {
+
+}

@@ -1,0 +1,6 @@
+package com.yashwant.stationerystore.configuration;
+
+@Con
+public class PayPalConfig {
+
+}

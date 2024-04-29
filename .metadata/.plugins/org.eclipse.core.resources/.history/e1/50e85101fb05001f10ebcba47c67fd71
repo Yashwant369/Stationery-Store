@@ -1,0 +1,20 @@
+package com.yashwant.stationerystore.util;
+
+import lombok.Data;
+
+@Data
+public class OrderResponse 
+{
+	private String orderId;
+	private String orderStatus;
+	private String paymentStatus;
+	private double orderAmount;
+	private 
+	  "orderAmount": 900.0,
+	    "orderAddress": "Jharkhand",
+	    "phoneNumber": "8294938487",
+	    "billingName": "Yash",
+	    "orderDate": "2024-04-29T06:12:01.012+00:00",
+	    "deliveryDate": null,
+
+}

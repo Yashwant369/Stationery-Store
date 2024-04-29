@@ -1,0 +1,24 @@
+package com.yashwant.stationerystore.util;
+
+import lombok.Data;
+
+@Data
+public class OrderItemResponse {
+	
+	private String orderItemId;
+	private int order
+	private double totalPrice;
+	
+}
+	
+	"orderItemId": 12,
+    "orderQuantity": 12,
+    "totalPrice": 900,
+    "product": {
+        "productId": "5b1d87b9-4d2d-499e-81f7-c9efd8ecb9ff",
+        "productTitle": null,
+        "productDescription": null,
+        "productPrice": 0.0,
+        "productDiscountPrice": 0.0,
+
+}
