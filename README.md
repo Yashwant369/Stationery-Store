@@ -84,106 +84,106 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 - Token Validation: Authentication filter validates tokens with each request.
 
 ## Screenshots
+
+- System Architecture
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/cc359e90-02a7-4257-869a-50744d147c04)
+
+- Application Workflow
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/16d10b71-0147-4c94-b501-57a03c03fd3c)
+
+
 - User Registration 
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/61b4cc35-9747-463e-b909-d5864e243da2)
 
 
 - User Login 
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3a68b1a-cec4-4d13-9e03-a800f57ccfd6)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/ec9c761b-9b10-43ac-b35c-1f586fefb511)
+
 
 - Upload User Image
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/08d5e6e2-5ea7-46fe-9273-85b2ffc1e109)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/810bb9f0-37a7-4dcf-bd97-cb1d098af77b)
 
-- Normal User fetching Admin Url
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/10f9ae47-b173-42f9-ad88-911aaf751eb5)
+
 
 - Admin Urls
+- ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/2b809889-fc35-4903-a03c-54d095451964)
 
-- Login
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b3323431-d78c-40d6-9e71-04f866b458f7)
 
-- Get all users
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dca7b651-8031-4abf-843b-a42f9b8b8e4c)
-
-- Get user by id
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8313b9a6-de45-459b-82c7-31096cbd20b1)
-
-- Get user by email
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/4cc267ef-978c-4a9c-bd9e-906e83a06762)
-
-- Delete user
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/b818a241-86b6-465c-a6cb-8a66c8d788ff)
-
-- Update user
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/69bea91d-2e0a-43cf-b1cb-2c1785a9351e)
 
 - Category Module
 - Add Category
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/3ec54400-a26c-4713-b53e-ce9f5a05f125)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/80ab56ba-850e-4d15-8993-1ea2548c8a20)
 
 - Get Category by title
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f629b1c2-91b0-41ee-ac7b-d28039b1da36)
-
-- Get all category
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/eda66d89-3b57-4254-94f3-9e3930712247)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/c99709ea-2f0c-4c11-a35a-97d5fd0a9f09)
 
 - Update category
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/313cf7a4-0e7a-4545-ab32-64b55e6959c9)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/92172856-728e-4d91-959d-fa110ae09429)
+
 
 - Delete category
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/dcdca08a-ec76-43cf-9c51-d4575ccfc55a)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/a1f6463f-0b19-471a-8a3d-6f1fb5bb496d)
+
 
 - Product Module
 
 - Add product along with category
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/975770a6-15f4-48dd-8b14-6fabf2bd9b9e)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/130ad20a-5b86-4846-a878-7e91eab46263)
 
-- Upload product image
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/e192170f-3a06-4b2a-a35a-5a8f2a53dd0e)
+
 
 - Get all product
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/07c3e352-2d92-491f-803c-464bffe7d68e)
+![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/40a6583b-51f8-4141-b594-112cbc8dd7c5)
 
-- Get product by id
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f969286a-d62e-42ad-8a1b-4bcf347e532b)
+
+
 
 - Update Product
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/c7a03c9d-f9e5-4114-976d-3fd709767a6d)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/821b8cc2-22ab-47b3-b257-7272d0df7eed)
+
 
 - Delete product
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/737963dd-47d2-499a-97ca-fad153b08d15)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/2156277e-7a5c-4e0a-a321-4a99460980a7)
 
 - Cart Module(User has authority to access urls)
 
 - Add item to cart
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/557e36f2-5266-4e5f-b213-f36773aa7840)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/c21c3b09-1264-4de6-a5a8-2cbfd1e936a0)
 
-- Remove item from cart
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/9935432e-3e23-4e42-9ef0-6831ea8ff0a0)
+
 
 - Update cart
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/0601abb5-cd5e-4c4c-98f2-f39e9012d80d)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8134ded0-4796-4edd-b7e1-278fdd6345dd)
+
 
 - Clear cart
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/ee1683a8-8fe3-4ac9-b66a-e6b3bda15700)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/9014ea8a-3e05-40a1-9d4b-2d7d76205c28)
 
-- Get cart of user
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/bcb6b4d0-8257-43d5-a006-9f90fb278ba4)
 
 - Order Module(User has authority to access urls)
 - Create order
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/8920e3f1-18c6-43ab-b543-dd4bf6febbd5)
+ ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/a4d5ae9a-a481-494d-8bb0-7c5b97fbba95)
+
   
 - Get order details
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/121be084-8095-4dc2-9cc9-cd05b3ff0c92)
-
-- Get all orders
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/f481359e-0512-4eda-8c83-5fc698cd17ed)
-
-- Update Order
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/44a8d367-8d35-4af2-81cc-4c9147d04b35)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/56e17a76-04a0-4f43-a14d-a2fa9ef03a7c)
 
 - Cancel order
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/264fd0c8-d21b-4f44-9bde-23358d47e729)
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/aab7d098-bbbc-46b2-af21-c397c785edb5)
+
+- Target Group
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/cd24cdc2-4172-485e-8f6a-d615d3812270)
+
+- Load Balancer
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/29594a5b-5473-407b-a446-066ae4a8b86a)
+
+- Security Group
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/0c6981be-9b97-4e1b-8647-c882fb733977)
+
+- Result Graph
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/800a843f-dd2f-4fb8-a045-e3677416b728)
+
+
+
 
 **Made by [Yashwant369](https://github.com/Yashwant369)**
