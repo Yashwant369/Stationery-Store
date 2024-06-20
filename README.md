@@ -114,7 +114,7 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 - Add Category
   ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/80ab56ba-850e-4d15-8993-1ea2548c8a20)
 
-- Get Category by title
+- Get Category details
  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/c99709ea-2f0c-4c11-a35a-97d5fd0a9f09)
 
 - Update category
