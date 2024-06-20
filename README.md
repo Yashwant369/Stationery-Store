@@ -85,11 +85,10 @@ E-Commerce Based Backend Application is a REST API developed using the Spring Bo
 
 ## Screenshots
 
-- System Architecture
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/cc359e90-02a7-4257-869a-50744d147c04)
 
-- Application Workflow
-  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/16d10b71-0147-4c94-b501-57a03c03fd3c)
+
+  - System Architecture 
+  ![image](https://github.com/Yashwant369/Stationery-Store/assets/71956889/61b4cc35-9747-463e-b909-d5864e243da2)
 
 - User Module
 - User Registration 
